@@ -13,8 +13,6 @@ DRAMMA (Detection of Resistance to AntiMicrobials  using Machine-learning Approa
 - Enables rapid ARG identification for large-scale genetic and metagenomic samples
 - Potential for early detection of specific ARGs, influencing antibiotic selection for patients
 
-The trained models and data needed for the feature extraction scripts are available on Zenodo: [https://doi.org/10.5281/zenodo.12621924](https://doi.org/10.5281/zenodo.12621924)
-
 ## Installation
 
 1. Clone the repository:
@@ -48,6 +46,18 @@ The trained models and data needed for the feature extraction scripts are availa
 - MMseqs2
 
 Please ensure these external programs are installed and accessible in your system's PATH, or provide their full paths when running the scripts.
+
+
+## Getting the data
+Downloading the trained models and data needed for the feature extraction scripts from the Zenodo database.
+Click on the following Zenodo link [https://doi.org/10.5281/zenodo.12621924](https://doi.org/10.5281/zenodo.12621924)
+or use the command line:
+```
+cd data
+wget https://zenodo.org/record/XXXXX/files/models_and_data.tar.gz?download=1
+tar -zxvf models_and_data.tar.gz
+rm models_and_data.tar.gz
+```
 
 ## Usage
 
@@ -127,34 +137,6 @@ Options:
 -pkl, --pickle        Save data to pickle instead of tsv (default: True)
 -b, --batch_size      Batch size for saving dataset when all_data=True (default: 0 - everything in one file)
 -c, --columns         JSON file with the columns to include in the dataset (default: '' - use all columns)
-```
-
-## License
-
-This project is licensed under the MIT License. This license is appropriate for academic work as it allows for free use, modification, and distribution while still providing some protection and attribution to the original authors.
-
-```
-MIT License
-
-Copyright (c) 2024 [fullname]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 ```
 
 ## Contact
