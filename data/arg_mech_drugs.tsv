@@ -1,0 +1,1638 @@
+ARG Name	Drug Class	Resistance Mechanism	Updated Resistance Mechanism
+tlrC	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+AAC(6')-IIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(2')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(2')-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(2')-Ic	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(2')-Id	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IIIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IIIc	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IIc	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IIb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IVa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IXa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-Ib/AAC(6')-Ib''	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-Ic	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-Id	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-VIIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-Xa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-29b	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-32	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-33	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-IIb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-IIc	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iad	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iae	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iai	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ic	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+VN23_18795	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-If	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ig	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ih	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ii	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ij	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ik	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ip	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iq	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ir	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Is	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iw	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iz	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iaf	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA6/aadA10	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA11	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA13	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA14	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA16	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA4	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA6	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA7	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aad9	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AadD	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadE	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadK	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(4')-IIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(4')-IIb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(4')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aad(6)	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(6)-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(2'')-IIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(2'')-IIIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(2'')-Ie	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-IIIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-IIb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-IIc	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-IVa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Aph3Ic	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AC230_04535	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-VIIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+T630_4108	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-Vc	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-IIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(4)-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(6)-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(9)-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+apmA	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+rmtB	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+npmA	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+rmtA	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+rmtC	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+rmtD	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+rmtF	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+rmtG	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+rmtH	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+sat-1	streptothricin	antibiotic inactivation	antibiotic inactivation
+sat-3	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+sat-4	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aad9Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(6)-Ic	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+str	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(9)-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aph(3'')-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+CMY-34	beta_lactam	antibiotic inactivation	antibiotic inactivation
+mrdA	beta_lactam	antibiotic target replacement	antibiotic target replacement
+ampC	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LCR-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ampS	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+blaA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ACT-12	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AER-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OKP-A-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CF70_016075	beta_lactam	antibiotic inactivation	antibiotic inactivation
+bla	beta_lactam	antibiotic inactivation	antibiotic inactivation
+DHA-21	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MOX-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MOX-5	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MOX-8	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TUS-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MUS-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SLB-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SFB-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SMB-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SRT-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sfh-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NmcR	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sed1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaRAHN-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LRA-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PER-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PER-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+L1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+KHM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JOHN-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CARB-10	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IND-7	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IND-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IND-4	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IND-6	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IND-9	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-14	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-9	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-15	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-16	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-27	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-35	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-37	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMI-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+bla(IMI-8)	beta_lactam	antibiotic inactivation	antibiotic inactivation
+dsx2_1119	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GOB-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GIM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AIM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+fonA-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BSONL12_02412	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-105	beta_lactam	antibiotic inactivation	antibiotic inactivation
+EBR-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+DIM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VCC-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2c_pse3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaCMH-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TLA-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TLA-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NDM-6	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaLAP-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL3_l	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaPLA-6A	beta_lactam	antibiotic inactivation	antibiotic inactivation
+vhw-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CAU-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CGB-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CcrA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL1_ceps	beta_lactam	antibiotic inactivation	antibiotic inactivation
+bcl1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SME-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+KS18_02580	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BEL-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+penP	beta_lactam	antibiotic inactivation	antibiotic inactivation
+FEZ-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+imiS	beta_lactam	antibiotic inactivation	antibiotic inactivation
+mecC	beta_lactam	antibiotic target replacement	antibiotic target replacement
+THIN-B	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cphA1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cphA2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SOHN41_01775	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SPM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SIM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaZEG	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SME-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXY-1-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXY-2-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-9	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-12	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-18	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-20	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-29	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-42	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-45	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-48	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-49	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-50	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-53	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-55	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-58	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaOXA-60c	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-61	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-62	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-114a	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-136	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-143	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-198	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-209	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-213	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-214	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-228	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-237	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-243	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-258	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OCH-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CARB-4	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CARB-5	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BD94_2866	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaB-15	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VEB-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VIM-7	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-8	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-41	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-45	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-110	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaAQU-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LRA-9	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaADC-30	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MBL-fold	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN977_05631	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tmb1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+QnrA1	quinolone	antibiotic target protection	antibiotic target protection
+QnrVC1	quinolone	antibiotic target protection	antibiotic target protection
+QnrB41	quinolone	antibiotic target protection	antibiotic target protection
+QnrD1	quinolone	antibiotic target protection	antibiotic target protection
+QnrS1	quinolone	antibiotic target protection	antibiotic target protection
+QnrVC5	quinolone	antibiotic target protection	antibiotic target protection
+FosA3	fosfomycin	antibiotic inactivation	antibiotic inactivation
+FosC	fosfomycin	antibiotic inactivation	antibiotic inactivation
+FosA2	fosfomycin	antibiotic inactivation	antibiotic inactivation
+fosX	fosfomycin	antibiotic inactivation	antibiotic inactivation
+fusB	fusidic_acid	antibiotic inactivation	antibiotic inactivation
+vanHM	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanYM	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXM	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanHF	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanC	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanYB	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXB	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXYL	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanTmL	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanTrL	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanHO	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanL	glycopeptide	antibiotic target alteration	antibiotic target alteration
+VanXYC	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanTC	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanHA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanO	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanG	glycopeptide	antibiotic inactivation	antibiotic inactivation
+vanM	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanF	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanH	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanHB	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanHD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXYC	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanWB	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXO	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanX	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXF	glycopeptide	antibiotic target alteration	antibiotic target alteration
+VanYA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanYF	glycopeptide	antibiotic target alteration	antibiotic target alteration
+VanZ	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanZF	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanE	glycopeptide	antibiotic target alteration	antibiotic target alteration
+EreA2	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+EreB	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+Erm(30)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Erm(31)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+tlrB	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Erm(33)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Erm(34)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Erm(35)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Erm(36)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Erm(41)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmA	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmC	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmD	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmF	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmG	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmH	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmN	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmO	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmQ	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmR	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmS	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmT	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmV	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmW	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmX	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmY	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+lnuB	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+ErmU	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+linA	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+lnuC	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+lnuD	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+linG	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+lsaA	multidrug	antibiotic target protection	antibiotic target protection
+lsaB	multidrug	antibiotic target protection	antibiotic target protection
+lsaC	multidrug	antibiotic target protection	antibiotic target protection
+mphB	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+mphC	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+mphD	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+MsrA	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+msrC	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+mel	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+msrE	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+oleB	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+vatB	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+vatC	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+vatD	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+vatE	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+vatF	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+vgaALC	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+vgaB	multidrug	antibiotic target protection	antibiotic target protection
+vgaD	multidrug	antibiotic target protection	antibiotic target protection
+vgaE	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+VgbA	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+VgbB	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+carA	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+vgb	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+cat	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+IO48_10670	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+cat86	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catII	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catIII	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catB	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catB2	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catB3	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catB9	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catB7	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catB8	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catB10	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catD	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catQ	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+cmlv	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+arr-4	rifampin	antibiotic inactivation	antibiotic inactivation
+arr-5	rifampin	antibiotic inactivation	antibiotic inactivation
+arr-7	rifampin	antibiotic inactivation	antibiotic inactivation
+rif	rifampin	antibiotic inactivation	antibiotic inactivation
+iri	rifampin	antibiotic inactivation	antibiotic inactivation
+sul3	sulfonamide	antibiotic target replacement	antibiotic target replacement
+otrA	tetracycline	antibiotic target protection	antibiotic target protection
+tet34	tetracycline	antibiotic target alteration	antibiotic target alteration
+tet36	tetracycline	antibiotic target protection	antibiotic target protection
+tet37	tetracycline	antibiotic inactivation	antibiotic inactivation
+tet44	tetracycline	antibiotic target protection	antibiotic target protection
+tetH	tetracycline	antibiotic inactivation	antibiotic inactivation
+tetO	tetracycline	antibiotic target protection	antibiotic target protection
+tetT	tetracycline	antibiotic target protection	antibiotic target protection
+MCR-1	polymyxin	antibiotic target alteration	antibiotic target alteration
+APH(3')-Va	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ErmE	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+FosA5	fosfomycin	antibiotic inactivation	antibiotic inactivation
+clbB	multidrug	antibiotic target alteration	antibiotic target alteration
+srmB	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+FosX	fosfomycin	antibiotic inactivation	antibiotic inactivation
+arr-8	rifampin	antibiotic inactivation	antibiotic inactivation
+rgt1438	rifampin	antibiotic inactivation	antibiotic inactivation
+myrA	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+vanN	glycopeptide	antibiotic target alteration	antibiotic target alteration
+tsnR	thiostrepton	antibiotic target alteration	antibiotic target alteration
+FomA	fosfomycin	antibiotic inactivation	antibiotic inactivation
+bcrC	bacitracin	antibiotic target alteration	antibiotic target alteration
+vanXYG	glycopeptide	antibiotic target alteration	antibiotic target alteration
+lsaE	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+vanYG1	glycopeptide	antibiotic target alteration	antibiotic target alteration
+chrB	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+aadA9	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+r39	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CARB-23	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-151	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SHV-112	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Erm(37)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+mphE	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+blaF	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PmrC	polymyxin	antibiotic target alteration	antibiotic target alteration
+vanXYN	glycopeptide	antibiotic target alteration	antibiotic target alteration
+TLA-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+vanXYE	glycopeptide	antibiotic target alteration	antibiotic target alteration
+OXA-361	beta_lactam	antibiotic inactivation	antibiotic inactivation
+mecR1	beta_lactam	antibiotic target replacement	antibiotic target replacement
+APH(7'')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+mfpA	quinolone	antibiotic target protection	antibiotic target protection
+vatH	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+APH(2'')-Ig	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(6)-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-30/AAC(6')-Ib'	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+mecI	beta_lactam	antibiotic target replacement	antibiotic target replacement
+AAC(6')-Isa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+rphA	rifampin	antibiotic inactivation	antibiotic inactivation
+pmrE	polymyxin	antibiotic target alteration	antibiotic target alteration
+class	beta_lactam	antibiotic inactivation	antibiotic inactivation
+lmrC	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+y56	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ib-SK	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+vanZA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+Erm(38)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+OXA-184	beta_lactam	antibiotic inactivation	antibiotic inactivation
+vanG	glycopeptide	antibiotic target alteration	antibiotic target alteration
+tet32	tetracycline	antibiotic target protection	antibiotic target protection
+fosA	fosfomycin	antibiotic inactivation	antibiotic inactivation
+vanTE	glycopeptide	antibiotic target alteration	antibiotic target alteration
+catB6	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+blaI	beta_lactam	antibiotic inactivation	antibiotic inactivation
+vanYD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+FosB3	fosfomycin	antibiotic inactivation	antibiotic inactivation
+EXO	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cat-TC	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+OXA-421	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Erm(43)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+vanTG	glycopeptide	antibiotic target alteration	antibiotic target alteration
+mecB	beta_lactam	antibiotic target replacement	antibiotic target replacement
+QnrC	quinolone	antibiotic target protection	antibiotic target protection
+vanWG	glycopeptide	antibiotic target alteration	antibiotic target alteration
+clbC	multidrug	antibiotic target alteration	antibiotic target alteration
+arnA	polymyxin	antibiotic target alteration	antibiotic target alteration
+APH(4)-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Erm(39)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+FosK	fosfomycin	antibiotic inactivation	antibiotic inactivation
+vatA	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+oleI	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iid	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+FomB	fosfomycin	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iih	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iak	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+spd	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3'')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+arr-1	rifampin	antibiotic inactivation	antibiotic inactivation
+OXA-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+vanTN	glycopeptide	antibiotic target alteration	antibiotic target alteration
+APH(3'')-Ic	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+FosC2	fosfomycin	antibiotic inactivation	antibiotic inactivation
+blaR1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ib8	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+sgm	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+AAC(6')-Ib7	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+vgaC	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+BJP-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+gimA	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+mprF	peptide	antibiotic target alteration	antibiotic target alteration
+AAC(6')-Iaj	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PEDO-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PEDO-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PEDO-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CPS-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ESP-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MSI-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MSI-OXA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SPG-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+vanJ	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanWI	glycopeptide	antibiotic target alteration	antibiotic target alteration
+fusD	fusidic_acid	antibiotic inactivation	antibiotic inactivation
+mphG	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+vanI	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanKI	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanXI	glycopeptide	antibiotic target alteration	antibiotic target alteration
+lnuE	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+salA	multidrug	antibiotic target protection	antibiotic target protection
+RlmA(II)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+mph	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+fusC	fusidic_acid	antibiotic inactivation	antibiotic inactivation
+optrA	multidrug	antibiotic target protection	antibiotic target protection
+XD36_3096	beta_lactam	antibiotic target alteration	antibiotic target alteration
+Mrx	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+MOX-9	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Rm3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADC-8	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Erm(47)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+erm(44)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+LlmA	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+CatU	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BahA	bacitracin	antibiotic inactivation	antibiotic inactivation
+VatI	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+AAC(2')-IIb	kasugamycin	antibiotic inactivation	antibiotic inactivation
+AAC(6')-34	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+VgbC	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+mphI	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+rphB	rifampin	antibiotic inactivation	antibiotic inactivation
+cpaA	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+mgtA	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+msrB	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+EdeQ	peptide	antibiotic inactivation	antibiotic inactivation
+bleomycin	bleomycin	antibiotic inactivation	antibiotic inactivation
+APH(3')-VIII	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3')-IX	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+lnuG	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+HMB-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ANT(3'')-IIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(3'')-IIb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(3'')-IIc	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+kamB	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+FosA7	fosfomycin	antibiotic inactivation	antibiotic inactivation
+TolC	multidrug	reduced permeability to antibiotic	reduced permeability to antibiotic
+KR51_00036950	beta_lactam	reduced permeability to antibiotic	reduced permeability to antibiotic
+MCR-3	polymyxin	antibiotic target alteration	antibiotic target alteration
+mecD	beta_lactam	antibiotic target replacement	antibiotic target replacement
+APH(2'')-If	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Vibrio	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BUT-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MCR-4	polymyxin	antibiotic target alteration	antibiotic target alteration
+MCR-5	polymyxin	antibiotic target alteration	antibiotic target alteration
+fosB	fosfomycin	antibiotic target alteration	antibiotic target alteration
+Sbal223_2079	beta_lactam	antibiotic target alteration	antibiotic target alteration
+evgA	multidrug	antibiotic target alteration	antibiotic target alteration
+ampC	beta_lactam	antibiotic target alteration	antibiotic target alteration
+evgS	multidrug	antibiotic target alteration	antibiotic target alteration
+APH(2'')-Ig	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+rphB	rifampin	reduced permeability to antibiotic	reduced permeability to antibiotic
+msrE	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ROB-1	beta_lactam	antibiotic target alteration	antibiotic target alteration
+tetW	tetracycline	antibiotic target alteration	antibiotic target alteration
+CTX-M-101	beta_lactam	antibiotic target alteration	antibiotic target alteration
+ethA	isoniazid	antibiotic target alteration	antibiotic target alteration
+HMPREF1562_2717	beta_lactam	antibiotic target alteration	antibiotic target alteration
+ACT-18	beta_lactam	antibiotic target alteration	antibiotic target alteration
+RW25_27295	beta_lactam	antibiotic target alteration	antibiotic target alteration
+APH(3')-Ia	aminoglycoside	reduced permeability to antibiotic	reduced permeability to antibiotic
+eatAv	multidrug	antibiotic target protection	antibiotic target protection
+tetT	tetracycline	antibiotic target alteration	antibiotic target alteration
+sat-3	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+arnC	polymyxin	antibiotic target alteration	antibiotic target alteration
+AAC(2')-Ia	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+AB432_04625	chloramphenicol	antibiotic target alteration	antibiotic target alteration
+rpsJ	beta_lactam	antibiotic target protection	antibiotic target protection
+blaOXA-1	beta_lactam	antibiotic target alteration	antibiotic target alteration
+B2K_23630	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+tetL	tetracycline	antibiotic target alteration	antibiotic target alteration
+ACU52_03190	beta_lactam	antibiotic target alteration	antibiotic target alteration
+AAC(1)	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+bacA	bacitracin	antibiotic target alteration	antibiotic target alteration
+BN1047_01714	beta_lactam	antibiotic target replacement	antibiotic target replacement
+rphB	rifampin	antibiotic target alteration	antibiotic target alteration
+oleR	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+desR	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+temp	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AN962_02850	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+LEN-22	beta_lactam	antibiotic inactivation	antibiotic inactivation
+mprF	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+ATE62_07440	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+JCM18904_2380	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F991_03391	beta_lactam	antibiotic inactivation	antibiotic inactivation
+sta	streptothricin	antibiotic inactivation	antibiotic inactivation
+SPM24T3_07834	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IP84_09695	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BacA	bacitracin	antibiotic target alteration	antibiotic target alteration
+OXA-129	beta_lactam	antibiotic inactivation	antibiotic inactivation
+KsgA	kasugamycin	antibiotic target alteration	antibiotic target alteration
+BC1003_5870	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASC78_12905	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ECCG_02785	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AV650_16790	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ACINWC323_3783	beta_lactam	antibiotic inactivation	antibiotic inactivation
+fosB	fosfomycin	antibiotic inactivation	antibiotic inactivation
+CfxA6	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BYI23_D003950	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ACINWC743_0148	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NGAL_HAMBI1189_11740	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2be_ctxm	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaT-6	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F969_01910	beta_lactam	antibiotic inactivation	antibiotic inactivation
+II9_03025	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL1_sm	beta_lactam	antibiotic inactivation	antibiotic inactivation
+R70331_17715	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+GYMC10_3621	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+blaA_1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF0201_00190	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NA8A_07729	beta_lactam	antibiotic inactivation	antibiotic inactivation
+pmrF	polymyxin	antibiotic target alteration	antibiotic target alteration
+KS18_02010	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+JCM10914_123	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PMI21_04305	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Rleg4DRAFT_4114	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Lqui_2697	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TE10_12060	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Rleg2_2947	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F990_01630	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AB685_17190	beta_lactam	antibiotic inactivation	antibiotic inactivation
+FosB	fosfomycin	antibiotic inactivation	antibiotic inactivation
+AZ78_1791	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+M768_10240	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+TU94_25875	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PMI16_03612	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AK40_1014	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+VanXD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+CMY-98	beta_lactam	antibiotic inactivation	antibiotic inactivation
+A989_16023	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaCTX-M	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL1_ec	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BABA_08541	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaZ	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VanD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+WS68_16125	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WH51_03205	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AZ66_01480	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+RO07_02130	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+HMPREF1505_1825	beta_lactam	antibiotic inactivation	antibiotic inactivation
+catS	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+CTX-M-42	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-4	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Rhein_0458	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AS888_05355	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-46	beta_lactam	antibiotic inactivation	antibiotic inactivation
+aacA7	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+IMI-4	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF3215_00041	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LA66_17590	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ant1_1	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+TEM-42	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JCM16418_2339	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+RCCGE510_19333	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASF14_19185	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+VanA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+F935_01490	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F993_03488	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AC624_14110	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+cfr	multidrug	antibiotic target alteration	antibiotic target alteration
+ABW44_02935	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+CblA-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-15	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BcII	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF9145_0517	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI32_05060	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CKS_2901	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MicloDRAFT_00044210	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JCM19047_3672	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI05_00160	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Pmen_2038	beta_lactam	antibiotic inactivation	antibiotic inactivation
+B4077_2344	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BleG1_0471	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VO69_07495	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RPSI07_mp0046	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEH_23880	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BG10_6932	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ALO78_02187	polymyxin	antibiotic target alteration	antibiotic target alteration
+N184_17645	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Bacsa_2220	beta_lactam	antibiotic inactivation	antibiotic inactivation
+B551_0203615	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+catA13	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+blaOXA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+catA16	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AV650_28380	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CMY-82	beta_lactam	antibiotic inactivation	antibiotic inactivation
+J057_11761	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaU	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ATE71_14205	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+UUU_18620	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CN09_03395	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BJB45_00760	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ST398NM01_2020	beta_lactam	antibiotic inactivation	antibiotic inactivation
+strA	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BN949_01517	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+OOA_14870	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL1_pao	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GM18_2318	beta_lactam	antibiotic target replacement	antibiotic target replacement
+BL2d_oxa1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+aac	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ant1	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+penPC	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AWB81_03660	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sbal195_0845	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2e_y56	beta_lactam	antibiotic inactivation	antibiotic inactivation
+DM39_6529	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADC-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Lnau_0681	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tetW	tetracycline	antibiotic target protection	antibiotic target protection
+BN2069_36810	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+F946_02659	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TQ38_26290	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+JF66_07460	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+ADS79_16900	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BL2a_III	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PDENDC454_06565	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+KS18_22820	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blm	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AFL22_19085	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tetM	tetracycline	antibiotic target protection	antibiotic target protection
+AS180_17385	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CLD_0021	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+VatB	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+Pcryo_1775	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Ltuc_1273	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BES08_20160	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+KF707C_27510	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BAMA_03925	beta_lactam	antibiotic inactivation	antibiotic inactivation
+XJ18_07905	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+ampC_2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SB4_14720	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Vapar_3231	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HALO3509	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PB2503_13554	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AMS60_00965	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+XM25_16535	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PROVRETT_07612	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PROVRUST_05757	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-34	beta_lactam	antibiotic target alteration	antibiotic target alteration
+BlaGIL-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+EBL_c13230	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Y886_30125	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+F945_03287	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OA45_00670	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+IKE_05732	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WS70_25295	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI25_000918	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BC1001_5831	beta_lactam	antibiotic inactivation	antibiotic inactivation
+oxa	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEM-47	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GLGR_3506	beta_lactam	antibiotic inactivation	antibiotic inactivation
+FG93_02833	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OI25_4698	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cmlA	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+OXA-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI41_04644	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MMAR_1674	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SHV-22	beta_lactam	antibiotic inactivation	antibiotic inactivation
+sul1	sulfonamide	antibiotic target replacement	antibiotic target replacement
+Psesu_0777	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+QQ25_05210	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+KNN_06295	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CDLVIII_2656	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+Cv017_21525	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AmpC	beta_lactam	antibiotic inactivation	antibiotic inactivation
+K678_12262	beta_lactam	antibiotic target replacement	antibiotic target replacement
+Smed_0125	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+TO66_29130	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+OCH-8	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaMOX-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ampC2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+A499_24844	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+NGR_c32650	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PTE_02723	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaOXA-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CV_0230	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ant1_2	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+HMPREF9554_02777	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+RA19_23950	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2b_ula	beta_lactam	antibiotic inactivation	antibiotic inactivation
+bmyco0002_58280	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+HALO4343	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Rleg4DRAFT_2512	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WJ33_13645	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RD02_10175	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaTEM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F889_02977	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2e_fpm	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASC64_11900	beta_lactam	antibiotic target replacement	antibiotic target replacement
+EY04_31830	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+IV66_GL000803	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+F384_08595	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ant	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ACR54_00646	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+JT27_16930	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BcrFT9_01917	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+O166_21360	beta_lactam	antibiotic inactivation	antibiotic inactivation
+neo	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+pbgP	polymyxin	antibiotic target alteration	antibiotic target alteration
+VIBNIFTn2_1190029	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+fosB2	fosfomycin	antibiotic inactivation	antibiotic inactivation
+UB47_19735	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AS034_02425	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+F933_03220	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadA	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PF66_02059	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaSHV	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WS68_05870	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+imp	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaACT-34	beta_lactam	antibiotic inactivation	antibiotic inactivation
+QW71_31235	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Entas_2396	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+APR47_42920	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JCM19231_3832	beta_lactam	antibiotic inactivation	antibiotic inactivation
+XB05_09780	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+TN98_10925	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF9710_02755	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Entcl_2980	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaTER-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL1_cmy2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ANT(3'')-Ii-AAC(6')-IId	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PROSTU_00250	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaCTX	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BURPS305_3406	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ATM99_15730	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+Ndas_2388	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADL06_32520	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+TU62_26660	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+vgb_2	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+B224_5390	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ND00_04320	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+mphA	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+PMI35_00271	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SZ54_3010	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaTEM	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ica_05539	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BA1DRAFT_00723	beta_lactam	antibiotic inactivation	antibiotic inactivation
+arnD	glycopeptide	antibiotic inactivation	antibiotic inactivation
+AW879_13615	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+SP99_00894	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AAC(6')-31	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+L360_00404	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADM90_08130	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+ALO50_101023	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JI76_37075	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+WH87_16890	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+MHB_001273	beta_lactam	antibiotic inactivation	antibiotic inactivation
+O59_000556	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AT258_18160	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF1016_02750	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AEAC466_20400	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Ant3Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+IIU_05946	beta_lactam	antibiotic inactivation	antibiotic inactivation
+C161_10563	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BALCAV_0219240	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+IV01_13870	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaOXY	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AC240_12925	beta_lactam	antibiotic inactivation	antibiotic inactivation
+oleD	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+ykris0001_260	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SBI_00203	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ABB26_03985	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ICS_03162	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AMQ68_09385	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF1170_03087	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASD52_25030	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ERS008531_02079	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+F889_00606	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AAV95_16190	beta_lactam	antibiotic inactivation	antibiotic inactivation
+sul2	sulfonamide	antibiotic target replacement	antibiotic target replacement
+ETAF_2879	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASE04_11055	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GS18_0220900	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RMCB_2111	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI31_05012	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASC92_22490	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Closa_2701	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+JM78_10775	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADK97_23745	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AMQ84_28155	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+B590_25524	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+F895_00180	beta_lactam	antibiotic inactivation	antibiotic inactivation
+M992_2411	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Mmwyl1_0154	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaRAHN-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN978_04976	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JCM19038_2988	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+tetB(P)	tetracycline	antibiotic target protection	antibiotic target protection
+BN537_02049	beta_lactam	antibiotic target replacement	antibiotic target replacement
+AKG12_05750	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BAVI_12359	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+blaB	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASG66_02340	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JCM19045_309	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+FC68_GL001087	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AT258_08370	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEM	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NI25_18235	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AS188_14525	beta_lactam	antibiotic target replacement	antibiotic target replacement
+XD36_3096	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AOG23_11490	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+TPA0598_07_06890	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AU385_04395	beta_lactam	antibiotic inactivation	antibiotic inactivation
+fusH	fusidic_acid	antibiotic inactivation	antibiotic inactivation
+Smed_4921	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AADA2	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+III_03076	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+bpmyx0001_49550	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaOXA-48-like	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-77	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD83_19545	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SR38_06470	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+OXA-101	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CCC_03326	beta_lactam	antibiotic target replacement	antibiotic target replacement
+F887_03629	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F944_03268	beta_lactam	antibiotic inactivation	antibiotic inactivation
+C176_21376	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+vanB	glycopeptide	antibiotic target alteration	antibiotic target alteration
+G113_02924	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD74_10480	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AUL38_02610	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+ASE85_08680	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+D782_4108	beta_lactam	antibiotic inactivation	antibiotic inactivation
+QQ25_13645	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MDG	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD14_09375	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+JS81_09190	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+blaTEM-193	beta_lactam	antibiotic inactivation	antibiotic inactivation
+P308_21355	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JCM19047_1264	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+WT44_29000	beta_lactam	antibiotic inactivation	antibiotic inactivation
+M918_20150	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+XPU_0115	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+NA29_04535	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Avi_3210	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+nps-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BE21_07815	bacitracin	antibiotic target alteration	antibiotic target alteration
+BN612_00522	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+NJ69_08675	polymyxin	antibiotic target alteration	antibiotic target alteration
+TQ38_01765	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+bcere0020_8040	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LMG16407_00540	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+XI25_15495	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+PN96_22825	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Q614_SASC00125G0001	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NP83_07915	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF1526_02323	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+SG34_20990	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ERS008437_00710	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AB447_210840	beta_lactam	antibiotic inactivation	antibiotic inactivation
+catA15	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+TEM-214	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SXM_2059	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VL15_12295	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AB204_07245	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+HCH_03105	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+JP75_11845	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BL1_pse	beta_lactam	antibiotic inactivation	antibiotic inactivation
+UCMB321_2366	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF1171_00331	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SHV-12	beta_lactam	antibiotic inactivation	antibiotic inactivation
+UB43_11210	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PMI28_03401	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VK98_00160	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SS37_25035	beta_lactam	antibiotic inactivation	antibiotic inactivation
+T458_11180	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ECTPHS_02421	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BW21_4525	beta_lactam	antibiotic inactivation	antibiotic inactivation
+I1A_001895	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tsnr	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+AH4AK4_1197	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AC244_07670	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+KR51_00036950	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sros_3941	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+JN27_22530	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BURMUCGD1_3867	beta_lactam	antibiotic inactivation	antibiotic inactivation
+XBP1_2830046	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ABW06_06170	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MEG1DRAFT_00859	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AB182_14595	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+K413DRAFT_0385	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+ARN_33380	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AU186_01365	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AA309_10385	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+MSMEG_2658	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tet	tetracycline	antibiotic target protection	antibiotic target protection
+LA66_00505	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Q607_CBUC00214G0114	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+IIQ_01397	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RUMOBE_04223	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AO265_40620	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+EC81_0210815	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WS72_29690	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+QnrS	quinolone	antibiotic target protection	antibiotic target protection
+BURMUCGD2_6517	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD86_23995	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+HDEF_1020	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN2156_03163	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+RSKD131_3983	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASG61_24945	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ampS	beta_lactam	antibiotic inactivation	antibiotic inactivation
+A370_04634	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AB26_5377	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI39_02504	beta_lactam	antibiotic inactivation	antibiotic inactivation
+APH(6)-Id	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+DK26_15510	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+LS69_04805	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(3)-VIIIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaP	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2a_III2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN133_883	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaCTX-M-14	beta_lactam	antibiotic inactivation	antibiotic inactivation
+arnC_1	polymyxin	antibiotic target alteration	antibiotic target alteration
+TLE	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AYJ56_20090	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AM274_25265	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+kanR	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASG66_11460	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaoxa58	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI11_04530	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASE46_23765	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+ERS370000_04144	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AF332_00150	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SK35_04809	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaWIN-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Bxe_B1593	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MED297_13282	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASH00_00180	beta_lactam	antibiotic target replacement	antibiotic target replacement
+Ndas_2389	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ABW45_03845	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASE98_04520	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+mfd	quinolone	antibiotic target alteration	antibiotic target alteration
+BAZO_16289	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+F948_02950	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LLO_1201	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AM629_00230	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Rin_00014660	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD24_10300	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AQZ52_14750	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BL2e_cepa	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN137_2547	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASE48_07805	beta_lactam	antibiotic inactivation	antibiotic inactivation
+bla-oxa-58	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WN59_12960	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+UQ64_03725	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+eptA	polymyxin	antibiotic target alteration	antibiotic target alteration
+HMPREF1568_2704	beta_lactam	antibiotic inactivation	antibiotic inactivation
+L810_4248	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F994_00492	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AT272_13830	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+VT50_06085	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+P308_30500	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+CARB-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Q644_14880	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+V070_01895	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AO353_20470	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RMCC_2286	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VI26_20275	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Lqua_0403	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SAZU_7360	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaCMY-2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CSCA_3312	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+WS62_05630	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+UB46_32240	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cat3	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+catP	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+F950_00947	beta_lactam	antibiotic inactivation	antibiotic inactivation
+aadA2	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+catA1	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+aacA	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+EDWATA_01448	polymyxin	antibiotic target alteration	antibiotic target alteration
+EDWATA_03336	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Clocel_1050	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AM499_05690	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+CTX-M-55	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF9445_00715	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF1181_02941	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ThisiDRAFT_0902	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-226	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF1486_01041	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ErmB	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+PMI22_02065	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F981_03472	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADT22_00070	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BL1_ampc	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sput200_1981	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F994_00202	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AU192_24225	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN558_00761	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+PG5_32970	beta_lactam	antibiotic inactivation	antibiotic inactivation
+L370_01734	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AWI43_09975	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+blacep05	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Mchl_1758	beta_lactam	antibiotic inactivation	antibiotic inactivation
+XDD1_0504	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+VL14_10265	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN979_01272	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+oxa9	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ACA30_14580	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASG97_25155	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CLL_A2128	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+yndN	fosfomycin	antibiotic inactivation	antibiotic inactivation
+MfpA	quinolone	antibiotic target protection	antibiotic target protection
+ADL27_50800	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SHV-167	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VanHD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+JCM19045_414	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MycrhN_5650	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADS79_29250	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+O166_18240	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PMI30_03884	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASF13_11450	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PDC-3	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PDENDC454_07895	beta_lactam	antibiotic inactivation	antibiotic inactivation
+UC34_00370	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ADL21_29550	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sput200_3270	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RGCCGE502_28523	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RTCIAT899_PC04360	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NAS141_18974	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SK32_02286	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+PZ78_10490	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AO896_03550	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BN452_01100	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+FG94_04780	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+pmrF_2	polymyxin	antibiotic target alteration	antibiotic target alteration
+ANT(2'')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(3'')-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ERS133249_01683	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SFK315_4868	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WH91_09680	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+CD31_17265	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+NHU_03651	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sbal175_2141	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BcrFT9_01992	beta_lactam	antibiotic inactivation	antibiotic inactivation
+grm	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+HMPREF0880_00216	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VanYD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+tsnr	thiostrepton	antibiotic target alteration	antibiotic target alteration
+oxa-58	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaPER	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI20_03723	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AXX16_2525	beta_lactam	antibiotic inactivation	antibiotic inactivation
+DP68_01695	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+A3K91_1255	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AWB76_01197	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CF161_04258	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AN964_10735	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+WS45_17420	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASE68_04225	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+DM82_6293	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VanHA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+Ldro_1246	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Lstg_3325	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Krm	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+KONIH1_31700	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CCNA_03676	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+fosB_2	fosfomycin	antibiotic inactivation	antibiotic inactivation
+AWB82_05438	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AWB79_01201	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AFK71_11355	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+RTCIAT899_CH00745	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+len-1-like	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OA46_09945	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VO68_05910	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PROVALCAL_00921	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+G114_05220	beta_lactam	antibiotic inactivation	antibiotic inactivation
+G039_0303925	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Agau_C200043	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BACUNI_00159	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+vph	peptide	antibiotic inactivation	antibiotic inactivation
+HMPREF0454_01344	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaCTX-M-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GLE_1155	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PAAL66ix_06808	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Lsan_0267	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JCM9152_3453	beta_lactam	antibiotic inactivation	antibiotic inactivation
+N180_04680	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+Shewmr7_2039	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tetS	tetracycline	antibiotic target protection	antibiotic target protection
+AKG37_13355	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+RP75_23205	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaSHV-12	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MTS1_02191	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+msrA	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+AXZ07_12315	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAY51_12970	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+Pat9b_1950	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AWB77_01135	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PS2015_1163	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Lani_0856	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GM31_01230	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD52_30785	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Ldum_0387	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Entas_0373	beta_lactam	antibiotic inactivation	antibiotic inactivation
+L581_3703	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VEB-1a	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WQ54_10930	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+blaCTX-M-15	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN682_00261	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ADK74_11615	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+UAK_02230	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+JCM19038_3715	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+A936_17376	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ALO51_04846	polymyxin	antibiotic target alteration	antibiotic target alteration
+ALO68_05557	polymyxin	antibiotic target alteration	antibiotic target alteration
+STRNTR1_0556	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SaccyDRAFT_2173	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+CMY-85	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RS75_08215	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SU60_01350	beta_lactam	antibiotic inactivation	antibiotic inactivation
+B932_2238	beta_lactam	antibiotic inactivation	antibiotic inactivation
+pac	puromycin	antibiotic inactivation	antibiotic inactivation
+BACCAP_04212	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+QnrB	quinolone	antibiotic target protection	antibiotic target protection
+ASE45_04665	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Mycsm_02498	beta_lactam	antibiotic inactivation	antibiotic inactivation
+HMPREF1013_04536	beta_lactam	antibiotic inactivation	antibiotic inactivation
+N878_07675	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IP83_02945	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+P364_0117545	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+mecA	beta_lactam	antibiotic target replacement	antibiotic target replacement
+PMI17_02969	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LHA_1702	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Mpop_1481	beta_lactam	antibiotic inactivation	antibiotic inactivation
+H650_24125	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+GY21_09535	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+fmrO	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+Ent638_1533	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iaa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Aac2Ic	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AXYL_02534	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BN1047_01714	beta_lactam	antibiotic inactivation	antibiotic inactivation
+lp12_1556	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL3_shw	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEM-193	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AF41_03335	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sked_12550	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BcI	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WS45_22090	beta_lactam	antibiotic inactivation	antibiotic inactivation
+catA4	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+HMPREF0202_02929	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+Smal_1717	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+MIR-14	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaSHV-143	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN487_00430	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ACZ11_19375	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VgaA	macrolide;lincosamide;streptogramin	antibiotic target protection	antibiotic target protection
+CFII64_02016	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+LG3211_1185	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASG76_13535	beta_lactam	antibiotic target replacement	antibiotic target replacement
+ABB27_14230	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SD53_15990	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BTS2_2475	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+CTX-M-109	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tmrB	tunicamycin	reduced permeability to antibiotic	reduced permeability to antibiotic
+SCO3595	glycopeptide	antibiotic target alteration	antibiotic target alteration
+ASD69_19860	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+LS81_08155	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AB870_05350	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+N234_27645	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SUH_0014p2	beta_lactam	antibiotic inactivation	antibiotic inactivation
+T458_13365	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+XM57_27510	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PRIO_2416	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SAMN02745223_02496	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+VR73_12885	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PROVALCAL_02707	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CepS	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PSEEN3982	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+HMPREF1212_05044	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+GLAD_03960	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaKPC	beta_lactam	antibiotic inactivation	antibiotic inactivation
+M2E15_5831	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+V473_07990	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SSE37_15566	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SHV-26	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F945_02224	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Ga0061061_103121	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEM-116	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BgramDRAFT_5618	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BAMA_18520	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CSV86_16915	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN1180_04911	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+ASG99_21105	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Sala_0666	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+RGCCGE502_01971	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+N783_03805	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+MDS_2137	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AS145_08555	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASE56_11865	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AZ46_0221210	beta_lactam	antibiotic inactivation	antibiotic inactivation
+DR95_1104	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AF333_29570	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+GES-11	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CLP_1841	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+CTX-M-142	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RT97_13450	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI32_04857	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+C169_12522	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VIM-4	beta_lactam	antibiotic inactivation	antibiotic inactivation
+EY04_27815	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AH4AK4_4246	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IL1808	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BAGA_08185	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AND4_10224	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AM506_04660	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tetPB	tetracycline	antibiotic target protection	antibiotic target protection
+BL2a_pc	beta_lactam	antibiotic inactivation	antibiotic inactivation
+FF80_02028	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+GLAD_03289	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+arnA_1	polymyxin	antibiotic target alteration	antibiotic target alteration
+ADK86_10240	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SY94_2150	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+D046_1762A	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IP85_04510	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+SUH3_15695	beta_lactam	antibiotic inactivation	antibiotic inactivation
+A245_07939	bacitracin	antibiotic target alteration	antibiotic target alteration
+carB6	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RO07_08790	beta_lactam	antibiotic inactivation	antibiotic inactivation
+SS33_18555	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BAGA_16895	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AF332_27215	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+IIU_05321	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AU195_01160	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OA46_22035	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+LT85_1566	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaTEM-195	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CN97_05115	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+OXA-205	beta_lactam	antibiotic inactivation	antibiotic inactivation
+FOX-7	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AWB80_07683	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BN979_03200	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Cseg_4049	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ACINWC487_2691	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD06_10205	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VK98_17900	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+TU73_12825	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BA70_16450	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BN77_3951	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+PputW619_2381	beta_lactam	antibiotic inactivation	antibiotic inactivation
+QP59_08460	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2d_moxa	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AB182_22595	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ROD_12321	beta_lactam	antibiotic inactivation	antibiotic inactivation
+WH43_04400	beta_lactam	antibiotic inactivation	antibiotic inactivation
+APH(3')-Vb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BTH_II1450	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PSAKL28_20770	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LA76x_1534	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+IKA_02882	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Rhein_2116	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AFA91_26250	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LTSEALA_2290	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BamMC406_5864	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AFM11_22160	beta_lactam	antibiotic inactivation	antibiotic inactivation
+B2K_23630	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+C100_12680	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+VE25_06015	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AWB75_03765	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ARD30_01020	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASG53_08300	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+BleG1_0189	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+CIFAM_04_03080	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PROVRETT_09033	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+MB84_23135	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AT267_09870	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AN964_13675	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+QY95_03548	beta_lactam	antibiotic inactivation	antibiotic inactivation
+FMAG_00636	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+V520_22670	bacitracin	antibiotic target alteration	antibiotic target alteration
+OXA-21	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OI73_13275	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tetQ	tetracycline	antibiotic target protection	antibiotic target protection
+AAC(6')-Ie-APH(2'')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BL2a_1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ACR52_17315	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+RR42_s0522	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL2d_oxa9	beta_lactam	antibiotic inactivation	antibiotic inactivation
+JH26_07980	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+MicloDRAFT_00068420	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Reut_A1684	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ATY39_14210	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AYK81_08635	beta_lactam	antibiotic inactivation	antibiotic inactivation
+QJ48_12835	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AWB83_03995	beta_lactam	antibiotic inactivation	antibiotic inactivation
+GEAM_1268	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ASD34_02750	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Lgra_3373	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ET33_18140	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+Aac2I	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASD16_16550	beta_lactam	antibiotic target replacement	antibiotic target replacement
+JM66_13945	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+C273_11191	beta_lactam	antibiotic inactivation	antibiotic inactivation
+baca	bacitracin	antibiotic target alteration	antibiotic target alteration
+BN2497_10997	beta_lactam	antibiotic inactivation	antibiotic inactivation
+FG93_03207	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+blaSHV-11	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PROVRETT_08647	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BW38_01803	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH(6)-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ASC94_15090	beta_lactam	antibiotic inactivation	antibiotic inactivation
+EP46_05115	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Aac3VIII	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+bla(CTX-M)	beta_lactam	antibiotic inactivation	antibiotic inactivation
+bcrD	bacitracin	antibiotic target alteration	antibiotic target alteration
+SN10_19300	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AS202_10895	beta_lactam	antibiotic inactivation	antibiotic inactivation
+F933_01738	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-10	beta_lactam	antibiotic inactivation	antibiotic inactivation
+C169_09248	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+IMCC9480_1114	beta_lactam	antibiotic inactivation	antibiotic inactivation
+RHSP_08625	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ampA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaCphA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PMI37_00545	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEM-95	beta_lactam	antibiotic inactivation	antibiotic inactivation
+PL79_26640	beta_lactam	antibiotic inactivation	antibiotic inactivation
+C162_33553	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+DB32_004935	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Ib9	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aac3	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ant6	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+FosA4	fosfomycin	antibiotic inactivation	antibiotic inactivation
+cls	peptide	antibiotic target alteration	antibiotic target alteration
+arr-2	rifampin	antibiotic inactivation	antibiotic inactivation
+estX	streptothricin	antibiotic inactivation	antibiotic inactivation
+tetR	tetracycline	antibiotic target alteration	antibiotic target alteration
+Erm(42)	macrolide;lincosamide;streptogramin	antibiotic target alteration	antibiotic target alteration
+arr-3	rifampin	antibiotic inactivation	antibiotic inactivation
+CTX	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEM-162	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BRP	glycopeptide	antibiotic inactivation	antibiotic inactivation
+OXA-72	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blc	beta_lactam	antibiotic inactivation	antibiotic inactivation
+AAC(3)-VIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+VIM-11	beta_lactam	antibiotic inactivation	antibiotic inactivation
+nimD	nitroimidazole	antibiotic inactivation	antibiotic inactivation
+asmA	multidrug	antibiotic inactivation	antibiotic inactivation
+ble	multidrug	antibiotic inactivation	antibiotic inactivation
+lnu	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+arr	rifampin	antibiotic inactivation	antibiotic inactivation
+vanY	glycopeptide	antibiotic target alteration	antibiotic target alteration
+linAn	macrolide;lincosamide;streptogramin	antibiotic inactivation	antibiotic inactivation
+nimE	nitroimidazole	antibiotic inactivation	antibiotic inactivation
+blaOXA-372	beta_lactam	antibiotic inactivation	antibiotic inactivation
+blaOXA-280	beta_lactam	antibiotic inactivation	antibiotic inactivation
+Turpa_2231	bleomycin	antibiotic inactivation	antibiotic inactivation
+OXA-85	beta_lactam	antibiotic inactivation	antibiotic inactivation
+aac(6')-Ie	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aph(2'')-Ia	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+III_02866	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-247	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BL3_cit	beta_lactam	antibiotic inactivation	antibiotic inactivation
+adenylyltransferase	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aac(6')-Ib4	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+chloramphenicol_hydrolase	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+OKP-A-6	beta_lactam	antibiotic inactivation	antibiotic inactivation
+QnrB17	quinolone	antibiotic target protection	antibiotic target protection
+RmtF-4	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+M2E15_0562	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cepA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+CTX-M-45	beta_lactam	antibiotic target alteration	antibiotic target alteration
+chloramphenicol_phosphotransferase	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+lsaB	multidrug	antibiotic inactivation	antibiotic inactivation
+Chloramphenicol_3-O-phosphotransferase	chloramphenicol	antibiotic inactivation	antibiotic inactivation
+VIM-29	beta_lactam	antibiotic inactivation	antibiotic inactivation
+ATN06_17210	beta_lactam	antibiotic inactivation	antibiotic inactivation
+IMP-41	beta_lactam	antibiotic inactivation	antibiotic inactivation
+NDM-10	beta_lactam	antibiotic inactivation	antibiotic inactivation
+VIM-17	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cphA8	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cphA7	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cphA6	beta_lactam	antibiotic inactivation	antibiotic inactivation
+cphA	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LRA-19	beta_lactam	antibiotic inactivation	antibiotic inactivation
+LRA-12	beta_lactam	antibiotic inactivation	antibiotic inactivation
+BCh11DRAFT_01667	beta_lactam	antibiotic inactivation	antibiotic inactivation
+MSMEI_3884	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-100	beta_lactam	antibiotic inactivation	antibiotic inactivation
+TEM1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+tetX	tetracycline	antibiotic inactivation	antibiotic inactivation
+vanYA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+OXA-355	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-229	beta_lactam	antibiotic inactivation	antibiotic inactivation
+OXA-331	beta_lactam	antibiotic inactivation	antibiotic inactivation
+nimJ	nitroimidazole	antibiotic inactivation	antibiotic inactivation
+NDM-1	beta_lactam	antibiotic inactivation	antibiotic inactivation
+mel	lincosamide;macrolide;oxazolidinone;phenicol;pleuromutilin;streptogramin;tetracycline	antibiotic target protection	antibiotic target protection
+OXA-409	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+OXA-347	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+IMP-12	carbapenem;cephalosporin;cephamycin;penam;penem	antibiotic inactivation	antibiotic inactivation
+LRA-1	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-5	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-13	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-2	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-7	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-8	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-10	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-18	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-3	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-12	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-17	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+LRA-19	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IIIb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-29a	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+lmrC	lincosamide;macrolide;oxazolidinone;phenicol;pleuromutilin;streptogramin;tetracycline	antibiotic target protection	antibiotic target protection
+OXA-443	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+vanI	glycopeptide	antibiotic target alteration	antibiotic target alteration
+Erm(44)v	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Erm(48)	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+sul4	sulfonamide	antibiotic target replacement	antibiotic target replacement
+almG	peptide	antibiotic target alteration	antibiotic target alteration
+RSA-1	carbapenem;cephalosporin	antibiotic inactivation	antibiotic inactivation
+RSA-2	carbapenem;cephalosporin	antibiotic inactivation	antibiotic inactivation
+CFE-2	cephamycin	antibiotic inactivation	antibiotic inactivation
+ICR-Mc	peptide	antibiotic target alteration	antibiotic target alteration
+CrpP	fluoroquinolone	antibiotic inactivation	antibiotic inactivation
+poxtA	lincosamide;macrolide;oxazolidinone;phenicol;pleuromutilin;streptogramin;tetracycline	antibiotic target protection	antibiotic target protection
+OXA-664	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+MCR-8	peptide	antibiotic target alteration	antibiotic target alteration
+MCR-8.1	peptide	antibiotic target alteration	antibiotic target alteration
+mphH	macrolide	antibiotic inactivation	antibiotic inactivation
+mphK	macrolide	antibiotic inactivation	antibiotic inactivation
+mphN	macrolide	antibiotic inactivation	antibiotic inactivation
+mphJ	macrolide	antibiotic inactivation	antibiotic inactivation
+CAM-1	carbapenem;cephalosporin;cephamycin;penam	antibiotic inactivation	antibiotic inactivation
+ICR-Mo	peptide	antibiotic target alteration	antibiotic target alteration
+PNGM-1	carbapenem;cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+tet(50)	tetracycline	antibiotic inactivation	antibiotic inactivation
+erm(46)	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+tet(56)	tetracycline	antibiotic inactivation	antibiotic inactivation
+Erm(49)	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+AAC(2')-IIa	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC(6')-Iag	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Erm(K)	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+lin	lincosamide	antibiotic inactivation	antibiotic inactivation
+catB11	phenicol	antibiotic inactivation	antibiotic inactivation
+emtA	lincosamide;macrolide	antibiotic target alteration	antibiotic target alteration
+aadA27	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+aadS	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+MCR-9	peptide	antibiotic target alteration	antibiotic target alteration
+MCR-9.1	peptide	antibiotic target alteration	antibiotic target alteration
+vga(E) Staphylococcus cohnii	lincosamide;macrolide;oxazolidinone;phenicol;pleuromutilin;streptogramin;tetracycline	antibiotic target protection	antibiotic target protection
+Tet(X3)	glycylcycline;tetracycline	antibiotic inactivation	antibiotic inactivation
+BAT-1	cephalosporin	antibiotic inactivation	antibiotic inactivation
+IDC-1	carbapenem;cephalosporin	antibiotic inactivation	antibiotic inactivation
+VMB-1	carbapenem	antibiotic inactivation	antibiotic inactivation
+LMB-1	carbapenem;cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+cfr(D)	lincosamide;oxazolidinone;phenicol;streptogramin	antibiotic target alteration	antibiotic target alteration
+FosL1	fosfomycin	antibiotic inactivation	antibiotic inactivation
+FRI-5	penam	antibiotic inactivation	antibiotic inactivation
+FRI-8	penam	antibiotic inactivation	antibiotic inactivation
+BLMT	glycopeptide	antibiotic inactivation	antibiotic inactivation
+SatA	nucleoside	antibiotic inactivation	antibiotic inactivation
+eptB	peptide	antibiotic target alteration	antibiotic target alteration
+LpsB	peptide	reduced permeability to antibiotic	reduced permeability to antibiotic
+LpsA	peptide	reduced permeability to antibiotic	reduced permeability to antibiotic
+ArnT	peptide	antibiotic target alteration	antibiotic target alteration
+Tet(X5)	tetracycline	antibiotic inactivation	antibiotic inactivation
+OXA-837	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IVb	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT(3'')-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ROB-3	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+AAC(3)-IIg	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+msrF	lincosamide;macrolide;oxazolidinone;phenicol;pleuromutilin;streptogramin;tetracycline	antibiotic target protection	antibiotic target protection
+msrH	lincosamide;macrolide;oxazolidinone;phenicol;pleuromutilin;streptogramin;tetracycline	antibiotic target protection	antibiotic target protection
+OXA-899	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+GPC-1	carbapenem	antibiotic inactivation	antibiotic inactivation
+FPH-1	penam	antibiotic inactivation	antibiotic inactivation
+vmlR	lincosamide;macrolide;oxazolidinone;phenicol;pleuromutilin;streptogramin;tetracycline	antibiotic target protection	antibiotic target protection
+Vibrio cholerae OmpT	peptide	reduced permeability to antibiotic	reduced permeability to antibiotic
+16S_Ribosomal_RNA_Methyltransferase	aminoglycoside	antibiotic target alteration	antibiotic target alteration
+AAC3	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC3-I	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC6-I	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC6-Ib	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+AAC6-II	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Aminotran_1_2		Aminotransferase	
+Aminotran_4		Aminotransferase	
+ANT2	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT3	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT4	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT6	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ANT9	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH	aminoglycoside	Acetyltransferase	antibiotic inactivation
+APH3	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH6	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+BCII	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+Beta-lactamase	beta_lactam	Beta-Lactamase	antibiotic inactivation
+Beta-lactamase2	beta_lactam	Beta-Lactamase	antibiotic inactivation
+BJP	carbapenem	antibiotic inactivation	antibiotic inactivation
+BlaB	carbapenem;penam	antibiotic inactivation	antibiotic inactivation
+blaR1	beta_lactam	Gene Modulating Resistance	antibiotic inactivation
+CARB-PSE	penam	antibiotic inactivation	antibiotic inactivation
+CAT	phenicol	Acetyltransferase	antibiotic inactivation
+CblA	cephalosporin	antibiotic inactivation	antibiotic inactivation
+CepA	cephalosporin	antibiotic inactivation	antibiotic inactivation
+Cfr23RibosomalRNAMethyltransferase	lincosamide;oxazolidinone;phenicol;pleuromutilin;streptogramin	antibiotic target alteration	antibiotic target alteration
+Cfr23_rRNA_methyltrans	lincosamide;oxazolidinone;phenicol;pleuromutilin;streptogramin	antibiotic target alteration	antibiotic target alteration
+CfxA	cephamycin	antibiotic inactivation	antibiotic inactivation
+Chloramphenicol_Acetyltransferase_CAT	phenicol	antibiotic inactivation	antibiotic inactivation
+Chloramphenicol_Phosphotransferase_CPT	chloramphenicol	Phosphotransferase	antibiotic inactivation
+Chlor_Phospho_CPT	chloramphenicol	Phosphotransferase	antibiotic inactivation
+ClassA	penam	antibiotic inactivation	antibiotic inactivation
+ClassB	beta-lactam	antibiotic inactivation	antibiotic inactivation
+ClassC-AmpC	cephalosporin;cephamycin;oxyimino-beta-lactam	antibiotic inactivation	antibiotic inactivation
+ClassD	cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+CMY-LAT-MOX-ACT-MIR-FOX	cephamycin;monobactam;carbapenem;cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+CPT	chloramphenicol	Phosphotransferase	antibiotic inactivation
+CTXM	cephalosporin	antibiotic inactivation	antibiotic inactivation
+Dala_Dala_lig_C	glycopeptide	D-ala D-ala Ligase	antibiotic target alteration
+Dala_Dala_lig_N	glycopeptide	D-ala D-ala Ligase	antibiotic target alteration
+DHA	cephalosporin;cephamycin	antibiotic inactivation	antibiotic inactivation
+DIM-GIM-SIM	carbapenem;cephalosporin	antibiotic inactivation	antibiotic inactivation
+Erm38	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmA	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmB	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+ErmC	lincosamide;macrolide;streptogramin	antibiotic target alteration	antibiotic target alteration
+Exo	penam	antibiotic inactivation	antibiotic inactivation
+FmrO	fortimicin	rRNA Methyltransferase	antibiotic target alteration
+GES	cephalosporin;carbapenem;penam	antibiotic inactivation	antibiotic inactivation
+GOB	carbapenem;cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+IMP	cephamycin;penem;carbapenem;cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+IND	carbapenem	antibiotic inactivation	antibiotic inactivation
+KHM	carbapenem;cephalosporin;cephamycin;penam;penem	antibiotic inactivation	antibiotic inactivation
+KPC	cephalosporin;carbapenem;penam;monobactam	antibiotic inactivation	antibiotic inactivation
+L1	cephalosporin	antibiotic inactivation	antibiotic inactivation
+Lactamase_B	beta_lactam	Beta-Lactamase	antibiotic inactivation
+Lactamase_B_2	beta_lactam	Beta-Lactamase	antibiotic inactivation
+LRA	penicillin;cephalosporin;carbapenem	antibiotic inactivation	antibiotic inactivation
+MacrolideGlycosyltransfer	macrolide	antibiotic inactivation	antibiotic inactivation
+macrolide_glycosyl	macrolide	antibiotic inactivation	antibiotic inactivation
+MoxA	beta_lactam	Beta-Lactamase	antibiotic inactivation
+mprF	peptide	antibiotic target alteration	antibiotic target alteration
+NDM-CcrA	carbapenem	antibiotic inactivation	antibiotic inactivation
+PC1	penam	antibiotic inactivation	antibiotic inactivation
+QuinoloneResistanceProteinQnr	fluoroquinolone	antibiotic target protection	antibiotic target protection
+Qnr	fluoroquinolone	antibiotic target protection	antibiotic target protection
+Sfh	carbapenem	antibiotic inactivation	antibiotic inactivation
+SHV-LEN	cephalosporin;carbapenem;penam	antibiotic inactivation	antibiotic inactivation
+SME	carbapenem	antibiotic inactivation	antibiotic inactivation
+SPM	carbapenem	antibiotic inactivation	antibiotic inactivation
+SubclassB1	penicillin;cephalosporin;carbapenem	antibiotic inactivation	antibiotic inactivation
+SubclassB2	carbapenem	antibiotic inactivation	antibiotic inactivation
+SubclassB3	penicillin;cephalosporin;carbapenem	antibiotic inactivation	antibiotic inactivation
+TEM	penam	antibiotic inactivation	antibiotic inactivation
+TetM-TetW-TetO-TetS	tetracycline	antibiotic target protection	antibiotic target protection
+tet_ribosomoal_protect	tetracycline	antibiotic target protection	antibiotic target protection
+Tetracycline_Resistance_Ribosomal_Protection_Protein	tetracycline	antibiotic target protection	antibiotic target protection
+TetX	glycylcycline;tetracycline	antibiotic inactivation	antibiotic inactivation
+vanA	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanB	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanC	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanD	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanT	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanX	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanY	glycopeptide	antibiotic target alteration	antibiotic target alteration
+vanZ	glycopeptide	antibiotic target alteration	antibiotic target alteration
+VEB-PER	penem;monobactam;carbapenem;cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+VIM	cephamycin;penem;carbapenem;cephalosporin;penam	antibiotic inactivation	antibiotic inactivation
+ANT	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+Aminoglyc_resit	kanamycin;gentamicin;tobramycin	Adenylyltransferase	antibiotic inactivation
+TE_Inactivator	tetracycline	antibiotic inactivation	antibiotic inactivation
+APH3''	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+APH3'	aminoglycoside	antibiotic inactivation	antibiotic inactivation
+ArmA_Rmt	aminoglycoside	antibiotic target alteration	antibiotic target alteration
