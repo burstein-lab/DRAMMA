@@ -19,7 +19,7 @@ The trained models and data needed for the feature extraction scripts are availa
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/DRAMMA.git
+   git clone https://github.com/burstein-lab/DRAMMA.git
    cd DRAMMA
    ```
 
