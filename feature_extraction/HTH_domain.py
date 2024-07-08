@@ -4,13 +4,14 @@ from analyze_tblout_result import process_tblout_file
 
 
 class HTHDomainFeatures(MLFeature):
-    def __init__(self, hmmer_path, hmm_dir, threshold=50):
+    def __init__(self, hmmer_path, hmm_dir, threshold=50, delete_files=True):
         """
         :param hmm_db: the database to run the hmm against - hmm of HTH
         """
         self.hmmer_path = hmmer_path
         self.hmm_dir = hmm_dir
         self.threshold = threshold
+        self.delete_files = delete_files
 
     def get_features(self, fasta_file, ids):
         '''
@@ -21,11 +22,13 @@ class HTHDomainFeatures(MLFeature):
             '''
         hmm_tblout = get_tblout_file(self.hmmer_path, self.hmm_dir, fasta_file)
         hmm_df = process_tblout_file(hmm_tblout, self.threshold, by_e_value=False, only_higher_than_threshold=False)
+        if self.delete_files:
+            os.remove(hmm_tblout)
         # score_full_seq - for all genes not just the ones that passed the threshold
-        relavent_hmm_df = hmm_df[['ID', 'best_score', 'rep']].rename(columns={'best_score': 'HTH_score_full_seq', 'rep': 'HTH_rep'})
-        relavent_hmm_df.HTH_rep[relavent_hmm_df['HTH_score_full_seq'] < self.threshold] = 0
+        hmm_df = hmm_df[['ID', 'best_score', 'rep']].rename(columns={'best_score': 'HTH_score_full_seq', 'rep': 'HTH_rep'})
+        hmm_df.HTH_rep[hmm_df['HTH_score_full_seq'] < self.threshold] = 0
 
-        return fill_all_empty_orfs_with_zeros(relavent_hmm_df, ids['ID']).astype({"HTH_score_full_seq": "float16", 'HTH_rep': "uint32"})
+        return fill_all_empty_orfs_with_zeros(hmm_df, ids['ID']).astype({"HTH_score_full_seq": "float16", 'HTH_rep': "uint32"})
 
     def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
         """

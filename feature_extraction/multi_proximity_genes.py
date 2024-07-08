@@ -11,13 +11,14 @@ FILE_TO_DB_NAME = {'Acrs': 'Acrs_HMM', 'Antirestriction_genes': 'Antirestriction
 
 
 class MultiProximityFeatures(MLFeature):
-    def __init__(self, hmmer_path, hmm_dir, threshold_list, by_eval, gene_window=5, nucleotide_window=5000):
+    def __init__(self, hmmer_path, hmm_dir, threshold_list, by_eval, gene_window=5, nucleotide_window=5000, delete_files=False):
         self.hmmer_path = hmmer_path
         self.hmm_dir = hmm_dir
         self.threshold_list = threshold_list
         self.by_eval = by_eval
         self.gene_window = gene_window
         self.nucleotide_window = nucleotide_window
+        self.delete_files = delete_files
 
     def __remove_unnecessary_columns(self, df) -> pd.DataFrame:
         windows = df[df.filter(like='genes_in').columns]
@@ -45,6 +46,8 @@ class MultiProximityFeatures(MLFeature):
                                                   self.gene_window, self.nucleotide_window)
             clean_df = self.__remove_unnecessary_columns(one_df)
             df_list.append(clean_df)
+            if self.delete_files:
+                os.remove(tblout)
         full_df = df_list[0].join(df_list[1:])
         full_df = self.__fill_missing_values(full_df)
         full_df = full_df.apply(pd.to_numeric, downcast='integer')  # reduces memory

@@ -27,7 +27,7 @@ class FeatureList:
         hmm_db = os.path.join(hmm_dir, 'DRAMMA_ARG_DB.hmm')
         feature_dict = {'labeling': Labeling(hmmer_path, hmm_db, label_threshold, by_eval),
                         'multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, gene_window, nucleotide_window),
-                        'default_multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval),  # 5, 5000
+                        'default_multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, delete_files=True),  # 5, 5000
                         "HTH_domains": HTHDomainFeatures(hmmer_path, hth_hmm_domains), 'DNA_KMers': KMersFeatures(dna_kmer_size),
                         "GC_Content": GCContentFeatures(), 'Prot_param': ProtParamsFeatures(),
                         'SmartGC': SmartGCFeatures(SMART_GC_DICT), 'Smart_AA_Kmers': SmartAAKmersFeatures(8, 8),
