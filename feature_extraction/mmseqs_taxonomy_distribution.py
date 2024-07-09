@@ -240,12 +240,13 @@ class MMseqsTaxonomyFeatures(MLFeature):
             output_df = output_df.set_index('ID').astype('float16')
         return output_df
 
-    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
+    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data, out_dir='features'):
         """
         This saves mmseqs features to files. Parameters are given from the user and from class instance.
         :param protein_fasta: str, *.fasta[.gz], an absoulte path to the input file
         :param gff, fa, data: not used by this func, only accepted because this is an abstract method
         :param ids: a dataframe containing all of the fasta's IDs
+        :param out_dir: path to output directory
         :return: output dataframe with MMseqs features.
         """
-        feature_to_file('mmseq_prox')(self.get_features)(protein_fasta, ids)
+        feature_to_file('mmseq_prox', dir_path=out_dir)(self.get_features)(protein_fasta, ids)

@@ -35,12 +35,12 @@ class FeatureList:
                         'Cross_Membrane': CrossMembraneFeatures(tmhmm_path)}
         self.features = list(feature_dict.values()) if not features else [value for key, value in feature_dict.items() if key in features]
 
-    def run_features(self, protein_fasta, gff, ffn, fa, do_print=True):
+    def run_features(self, protein_fasta, gff, ffn, fa, out_dir='features', do_print=True):
         ids = getIDs(protein_fasta)
         data = getData(fa, ffn)  # returns a DF with contig_id, contig_seq, gene_list (their sequences)
         for feature in self.features:
             before = time.time()
-            feature.run_feature_to_file(protein_fasta, gff, fa, ids, data)
+            feature.run_feature_to_file(protein_fasta, gff, fa, ids, data, out_dir)
             after = time.time()
             if do_print:
                 print(f'{type(feature)} took: {(after-before)/60} minutes')

@@ -115,11 +115,12 @@ class KMersFeatures(MLFeature):
         finaldataframe.set_index('ID', inplace=True)
         return finaldataframe.astype('float32')
 
-    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
+    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data, out_dir='features'):
         """
         This saves Kmers features to files. Parameters are given from the user and from class instance.
         :param protein_fasta, gff, ids: not used by this func, only accepted because this is an abstract method
         :param fa: only sent to get_features so feature to file will work, as a filename is needed.
         :param data: a dataframe containing contig name, seq, genes list
+        :param out_dir: path to output directory
         """
-        feature_to_file('DNA_Kmers')(self.get_features)(fa, data)
+        feature_to_file('DNA_Kmers', dir_path=out_dir)(self.get_features)(fa, data)

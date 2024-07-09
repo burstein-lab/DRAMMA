@@ -36,10 +36,11 @@ class ProtParamsFeatures(MLFeature):
         df[COLS] = df['Record'].apply(ProtParamsFeatures.__get_params)
         return df.set_index('ID').drop(columns=['Record'])
 
-    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
+    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data, out_dir='features'):
         """
         This saves protein params features to files. Parameters are given from the user and from class instance.
         :param protein_fasta: str, *.fasta[.gz], an absoulte path to the input file
         :param gff, fa, ids, data: not used by this func, only accepted because this is an abstract method
+        :param out_dir: path to output directory
         """
-        feature_to_file('Prot_param')(self.get_features)(protein_fasta)
+        feature_to_file('Prot_param', dir_path=out_dir)(self.get_features)(protein_fasta)

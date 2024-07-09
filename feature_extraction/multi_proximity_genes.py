@@ -53,12 +53,13 @@ class MultiProximityFeatures(MLFeature):
         full_df = full_df.apply(pd.to_numeric, downcast='integer')  # reduces memory
         return full_df
 
-    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
+    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data, out_dir='features'):
         """
         This saves multi_proximity features to files. Parameters are given from the user and from class instance.
         :param protein_fasta: str, *.fasta[.gz], an absoulte path to the input file
         :param gff: a gff file
         :param fa, data: not used by this func, only accepted because this is an abstract method
         :param ids: a dataframe containing all of the fasta's IDs
+        :param out_dir: path to output directory
         """
-        feature_to_file(f'HMM_Proximity_{self.gene_window}')(self.get_features)(protein_fasta, gff, ids)
+        feature_to_file(f'HMM_Proximity_{self.gene_window}', dir_path=out_dir)(self.get_features)(protein_fasta, gff, ids)

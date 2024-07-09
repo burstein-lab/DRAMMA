@@ -78,11 +78,12 @@ class SmartGCFeatures(MLFeature):
         final_df = pd.concat(df_lst, ignore_index=True)
         return final_df.set_index('ID').astype("float16")
 
-    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
+    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data, out_dir='features'):
         """
         This saves smart_GC features to files. Parameters are given from the user and from class instance.
         :param protein_fasta, gff, ids: not used by this func, only accepted because this is an abstract method
         :param fa: only sent to get_features so feature to file will work, as a filename is needed.
         :param data: a dataframe containing contig name, seq, genes list
+        :param out_dir: path to output directory
         """
-        feature_to_file('Smart_GC')(self.get_features)(fa, data['genes_list'])
+        feature_to_file('Smart_GC')(self.get_features, dir_path=out_dir)(fa, data['genes_list'])

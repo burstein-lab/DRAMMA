@@ -21,7 +21,7 @@ SUFFIX_LIST = ['proteins.faa', 'gff', 'genes.ffn', 'fa']
 
 class MLFeature(ABC):
     @abstractmethod
-    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
+    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data, out_dir='features'):
         pass
 
 
@@ -182,15 +182,15 @@ def check_file_exists(file_path, feature_name, directory, protocol='pkl'):
     return 0
 
 
-def results_to_file(df, datafilename, extention, directory ):
-    filename = str(directory) + '/' + str(Path(datafilename).stem) + '.' + extention + FILEPROTOCOL
+def results_to_file(df, file_path, feature_name, directory):
+    filename = os.path.join(directory, f'{str(Path(file_path).stem)}.{feature_name}.pkl')
     print('saving to ' + filename)
     print(df.shape)
     df.to_pickle(filename)
 
 
-def results_to_csv(df, datafilename, extention, directory ):
-    filename = str(directory) + '/' + str(Path(datafilename).stem) + '.' + extention + '.tsv'
+def results_to_csv(df, file_path, feature_name, directory):
+    filename =  os.path.join(directory, f'{str(Path(file_path).stem)}.{feature_name}.tsv')
     df.to_csv(filename, sep='\t', float_format='%.2f')
 
 

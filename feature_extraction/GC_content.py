@@ -61,11 +61,12 @@ class GCContentFeatures(MLFeature):
         df = pd.concat(gc, ignore_index=True).set_index('ID')
         return df.astype({'contigGC': "float16", "geneGC": "float16", "GC_diff": "float16"})
 
-    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data):
+    def run_feature_to_file(self, protein_fasta, gff, fa, ids, data, out_dir='features'):
         """
         This saves GC_content features to files. Parameters are given from the user and from class instance.
         :param protein_fasta, gff, ids: not used by this func, only accepted because this is an abstract method
         :param fa: only sent to get_features so feature to file will work, as a filename is needed.
         :param data: a dataframe containing contig name, seq, genes list
+        :param out_dir: path to output directory
         """
-        feature_to_file('GC_Content')(self.get_features)(fa, data)
+        feature_to_file('GC_Content', dir_path=out_dir)(self.get_features)(fa, data)
