@@ -6,37 +6,39 @@ from utilities import go_through_files
 from feature_list import FeatureList, ALL_FEATURES
 
 
-def create_features_pkls(feature_lst, dir_path, files_paths):
+def create_features_pkls(feature_lst, dir_path, files_paths, outdir):
     """
     creates pkl for each sample with all the features.
     NOTICE: if the one of the features does not run, the function will pass it and continue to the next sample
     :param feature_lst: A Featurelist object with all the wanted feature classes
     :param dir_path: the path of the sample
     :param files_paths: list, contains: proteins_fasta, gff, ffn, fa
+    :param outdir: path to directory we want to save our features in.
     :return: Does not return anything. Creates pkl files in the current directory
     """
     all_start = time.time()
     if dir_path in files_paths[0]:  # files already have full path
-        feature_lst.run_features(f'{files_paths[0]}', f'{files_paths[1]}', f'{files_paths[2]}', f'{files_paths[3]}', do_print=True)
+        feature_lst.run_features(f'{files_paths[0]}', f'{files_paths[1]}', f'{files_paths[2]}', f'{files_paths[3]}', out_dir=outdir, do_print=True)
     else:
         feature_lst.run_features(os.path.join(dir_path, files_paths[0]), os.path.join(dir_path, files_paths[1]),
-                     {os.path.join(dir_path, files_paths[2])}, os.path.join(dir_path, files_paths[3]), do_print=True)
+                     {os.path.join(dir_path, files_paths[2])}, os.path.join(dir_path, files_paths[3]), out_dir=outdir, do_print=True)
 
     print('finished all the features individually')
     all_end = time.time()
     print("Time consumed in working on it all: ", all_end - all_start)
 
 
-def create_features_from_dir(input_path, feature_lst, suffix):
+def create_features_from_dir(input_path, feature_lst, suffix, output_dir):
     """
     goes through all the sample files and run all the features on each sample
     :param input_path: starts with the input_path given by the user, keep entering the folders
     :param feature_lst: object for the calculation of the relevant features
     :param suffix: a prefix to the protein sample files you want to get, such as the protein file will end with {suffix}proteins.faa
+    :param output_dir: path to directory we want to save our features in.
     :return: for each sample, df wrapped as pkl file, in the folder "all_merged_pkls"
     """
     for files_paths in go_through_files(input_path, suffix):
-        create_features_pkls(feature_lst, input_path, files_paths)
+        create_features_pkls(feature_lst, input_path, files_paths, output_dir)
 
 
 def main(args):
@@ -51,9 +53,9 @@ def main(args):
                                   args.nucleotide_window, features=features_to_run)
 
     if args.dif_format_paths:
-        create_features_pkls(feature_lst, args.input_path, args.dif_format_paths)
+        create_features_pkls(feature_lst, args.input_path, args.dif_format_paths, args.output_dir)
     else:
-        create_features_from_dir(args.input_path, feature_lst, args.suffix)
+        create_features_from_dir(args.input_path, feature_lst, args.suffix, args.output_dir)
     stop = timeit.default_timer()
     execution_time = stop - start
     print("features Executed in ", execution_time)
@@ -61,7 +63,10 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run feature extraction on a given sample or a directory of samples.')
-    parser.add_argument('--input_path', type=str, help='Insert the full path of the wanted directory with all the assemblies')
+    parser.add_argument('--input_path', type=str, help='Insert the full path of the wanted directory with all the assemblies. not needed if --dif_format_paths is supplied.')
+    parser.add_argument("--dif_format_paths", nargs='*', type=str,
+                        help="The data in the 4 different formats faa,fa,gff,ffn. If we want to only run the script on one sample. if supplied --input_path is not needed.")
+    parser.add_argument('--output_dir', type=str, help='the path to the directory we want to save our features in, default: "features" (new sub directory of current directory)', default='features')
     parser.add_argument('--data_path', type=str, help='full path of the directory with all the data needed for feature extraction.'
                                                       'Should be feature_extraction dir downloaded from Zonedo')
     parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program.")
@@ -81,8 +86,7 @@ if __name__ == '__main__':
                         help="choose this to use a threshold by score. use --by_evalue for evalue threshold")
     parser.add_argument("-sf", "--suffix", default='.min10k.', help="suffix to sample files such that the protein file will end with {suffix}proteins.faa."
                                                                     " for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies")
-    parser.add_argument("--dif_format_paths", nargs='*', type=str,
-                        help="The data in the 4 different formats faa,fa,gff,ffn. If not give, will go over entire input_dir")
+
     parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['Cross_Membrane'],
                         help="The list of features names (according to the names in FeaturesList) that we dont want"
                              "to execute. default: ['Cross_Membrane']")

@@ -92,7 +92,14 @@ def go_through_df(directory_path, whitelist):
                 yield combine_all_pkls(entry, pd.DataFrame([]).rename_axis('ID'))
 
 
-def run_creator(dir, whitelist, PUMPS, columns, all_data=False, is_pickle=False, batch_size=0):
+def fix_df(df, is_pumps, columns):
+    fix_labels(df, is_pumps)
+    missing_cols = [col for col in columns if col not in df.columns]
+    df = df.reindex(columns=df.columns.tolist() + missing_cols, fill_value=np.nan)
+    return df
+
+
+def run_dataset_creator(dir, whitelist, is_pumps, columns, all_data=False, is_pickle=False, batch_size=0, out_dir=os.getcwd()):
     """
     goes over the pickels one by one create the train dtataset with only a 10 fold negative/positive
     it is useful so we will not create the huge table with all the negative bias that we dont need right now
@@ -104,46 +111,43 @@ def run_creator(dir, whitelist, PUMPS, columns, all_data=False, is_pickle=False,
     file_num = 1
     finale_df = pd.DataFrame()
     for df in go_through_df(dir, whitelist):
-        # filtering out only non-empty Dataframes and those who did not fail in feature selection
-        if len(df) > 0 and 'passed threshold' in df.columns and 'molecular_weight_pp' in df.columns:
+        # filtering out only non-empty Dataframes
+        if len(df) > 0 and 'passed threshold' in df.columns:
             if all_data:
-                fix_labels(df, PUMPS)
-                missing_cols = [col for col in columns if col not in df.columns]
-                df = df.reindex(columns=df.columns.tolist()+missing_cols, fill_value=np.nan)
+                df = fix_df(df, is_pumps, columns)
                 # appending dataframe to result file
                 if batch_size == 0: # appending all results to one file
-                    df[columns].to_csv(rf'{os.getcwd()}/ml_feature_table_complete_dataset.tsv.gz', sep='\t', mode='a', header=is_first, compression="gzip")
+                    df[columns].to_csv(os.path.join(out_dir, 'ml_feature_table_complete_dataset.tsv.gz'), sep='\t', mode='a', header=is_first, compression="gzip")
                     is_first = False
                 else:
                     finale_df = df[columns] if is_first else pd.concat([finale_df, df[columns]])
                     is_first = False
                     if len(finale_df) >= batch_size: # time to write df to file
                         if is_pickle:
-                            finale_df[columns].to_pickle(rf'{os.getcwd()}/ml_feature_table_complete_dataset_batch_{file_num}.pkl')
+                            finale_df[columns].to_pickle(os.path.join(out_dir, f'ml_feature_table_complete_dataset_batch_{file_num}.pkl'))
                         else:
-                            finale_df[columns].to_csv(rf'{os.getcwd()}/ml_feature_table_complete_dataset_batch_{file_num}.tsv.gz', sep='\t', compression="gzip")
+                            finale_df[columns].to_csv(os.path.join(out_dir, f'ml_feature_table_complete_dataset_batch_{file_num}.tsv.gz'), sep='\t', compression="gzip")
                         file_num += 1
                         is_first = True # next df will be the first one in batch
                         finale_df = pd.DataFrame()
             else:
-                df = manage_bias_data(df, NEGATIVE_RATIO, PUMPS)
+                df = manage_bias_data(df, NEGATIVE_RATIO, is_pumps)
                 missing_cols = [col for col in columns if col not in df.columns]
                 df = df.reindex(columns=df.columns.tolist()+missing_cols, fill_value=np.nan)
                 df_lst.append(df)
 
-            # clean_df = prepare_for_learning(unbiased_df, throshold, hmmdb_name)
     if not all_data:
         finale_df = pd.concat(df_lst)
         return finale_df
     elif batch_size > 0:  # saving last batch
         if is_pickle:
-            finale_df[columns].to_pickle(rf'{os.getcwd()}/ml_feature_table_complete_dataset_batch_{file_num}.pkl')
+            finale_df[columns].to_pickle(os.path.join(out_dir, f'ml_feature_table_complete_dataset_batch_{file_num}.pkl'))
         else:
-            finale_df[columns].to_csv(rf'{os.getcwd()}/ml_feature_table_complete_dataset_batch_{file_num}.tsv.gz', sep='\t', compression="gzip")
+            finale_df[columns].to_csv(os.path.join(out_dir, f'ml_feature_table_complete_dataset_batch_{file_num}.tsv.gz'), sep='\t', compression="gzip")
 
 
 def main(args, columns):
-    train_df = run_creator(args.directory, args.whitelist, args.pumps, columns, args.all_data, args.pickle, args.batch_size)
+    train_df = run_dataset_creator(args.directory, args.whitelist, args.pumps, columns, args.all_data, args.pickle, args.batch_size)
     print("##### finished run creator #####")
     if not args.all_data:
         if args.pickle:
