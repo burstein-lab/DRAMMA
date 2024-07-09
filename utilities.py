@@ -143,38 +143,41 @@ def k_Mers_Count(k, seq, step, is_dna=False):
     return mers_dict
 
 
-def create_relevant_directory(directory_name, datafilename):
+def create_relevant_directory(feature_directory, file_path, dir_path='features'):
     '''
     creates the directory to store all the future runs for this feature
-    :param directory_name: the name of the directory :) it should be the name of the feature+dir
+    :param feature_directory: the name of the directory for the feature. it should be the name of the feature+dir
+    :param file_path: path to sample file.
+    :param dir_path: name of directory to save all the features
     '''
-    directory_name = Path(directory_name)
-    p = Path(datafilename).stem
-    suff = Path(p).suffix
-    sample_dir = Path(p).stem if suff=='.proteins' else Path(p)
+    if dir_path and not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+
+    p = Path(Path(file_path).stem)
+    sample_dir = p.stem if p.suffix =='.proteins' else p
+    sample_dir = os.path.join(dir_path, sample_dir)
     if not os.path.exists(sample_dir):
         os.makedirs(sample_dir)
-    if not os.path.exists(sample_dir/directory_name):
-        os.makedirs(sample_dir/directory_name)
-    return sample_dir/directory_name
+    if not os.path.exists(os.path.join(sample_dir, feature_directory)):
+        os.makedirs(os.path.join(sample_dir, feature_directory))
+    return os.path.join(sample_dir, feature_directory)
 
 
-def check_file_exists(datafilename, extention, directory):
+def check_file_exists(file_path, feature_name, directory, protocol='pkl'):
     '''
-    checks rather the file exists.
-    the directory should NOT end with '/' and niether shoulld the datafilename start with it.
-    :param datafilename: the file with all the data - so we can extract the name we want to save the file by
-    :param extention: the name of the feature
-    :param directory: where the file should be saved
+    checks whether the file exists.
+    :param file_path: the path to the data file so we can extract the name we want to save the file by
+    :param feature_name: the name of the feature
+    :param directory: where the feature file should be saved
+    :param protocol: the file protocol of the feature file.
     :return: 1 if file exists and has something stored.
     '''
-    filename = str(directory) + '/' + str(Path(datafilename).stem) + '.' + extention + FILEPROTOCOL
+    filename = os.path.join(directory, f'{str(Path(file_path).stem)}.{feature_name}.{protocol}')
     # file name might include '.proteins' and also might not
     filename = Path(filename) if Path(filename).is_file() else Path(filename.replace('.proteins', ''))
     if filename.is_file():
         filesize = os.stat(filename).st_size
         if filesize > 0:
-            # df = pd.read_pickle(filename)
             return 1
     return 0
 
@@ -191,37 +194,37 @@ def results_to_csv(df, datafilename, extention, directory ):
     df.to_csv(filename, sep='\t', float_format='%.2f')
 
 
-def feature_to_file(extention, protocol = 'pkl'):
+def feature_to_file(feature_name, protocol='pkl', dir_path='features'):
     '''
-    a method that is used as a double decorator, pretty complicated way of doing it.
-    the goal is the wrap a method that returns a dataframe, and save it into a file, if it doesnt exists, and name it.
+    a method that is used as a double decorator.
+    the goal is the wrap a method that returns a dataframe, and save it into a file, if it doesn't exist, and name it.
     won't run the method if the file exists.
 
-    :param extention: what should be the name of the file, ie GC_content
-    :param protocol: the pretocol to sace into - pkl/csv
+    :param feature_name: what should be the name of the file, ie GC_content
+    :param protocol: the protocol to save into - pkl/csv
+    :param dir_path: the path to the output_dir
     :return:
     '''
     def to_file(func):
 
         @wraps(func)
         def wrapper(*args, **kwargs):
-            if extention == 'ALL_PKLS':
-                dirname = 'all_merged_pkls'
-                if not os.path.exists(dirname):
-                    os.makedirs(dirname)
+            if feature_name == 'ALL_PKLS':
+                feature_dir = 'all_merged_pkls'
+                if not os.path.exists(feature_dir):
+                    os.makedirs(feature_dir)
                     print('created directory')
             else:
-                dirname = extention +'_dir'
-                dirname = create_relevant_directory(dirname, args[0])
-            if not check_file_exists(args[0],extention,dirname):
+                feature_dir = feature_name + '_dir'
+                feature_dir = create_relevant_directory(feature_dir, args[0], dir_path)
+            if not check_file_exists(args[0], feature_name, feature_dir, protocol):
                 df = func(*args, **kwargs)
-                #optimize the size of the dataframe
-                # df = df.convert_dtypes()
+                # optimize the size of the dataframe
                 df = optimize_the_df(df)
                 if protocol == 'pkl':
-                    results_to_file(df,args[0],extention,dirname)
+                    results_to_file(df, args[0], feature_name, feature_dir)
                 elif protocol == 'csv':
-                    results_to_csv(df,args[0],extention,dirname)
+                    results_to_csv(df, args[0], feature_name, feature_dir)
         return wrapper
     return to_file
 
