@@ -83,7 +83,6 @@ if __name__ == '__main__':
     parser.add_argument('--mmseqs_path', type=str, help='full path to the Mmseqs2 program.')
     parser.add_argument('--tmhmm_path', type=str, help='full path to the tmhmm program.')
     parser.add_argument('--feature_dir', type=str, help='the path to the directory we want to save our features in, default: "features" (new sub directory of current directory)', default='features')
-    parser.add_argument("-hm", "--hmmdb", type=str, help="the path of database for HMM search")
     parser.add_argument("-k", "--kmer", type=int, default=4, help="It will run the kmers count from 2 to k, default=4")
     parser.add_argument("-lt", "--label_threshold", type=str, default="1e-10",
                         help="Threshold for the proximity feature -  hmm comparison, default = 0.000001")
@@ -92,8 +91,8 @@ if __name__ == '__main__':
     parser.add_argument("-d", "--gene_window", type=int, default=10, help="Size of the ORFs window, default = 10")
     parser.add_argument("-n", "--nucleotide_window", type=int, default=10000,
                         help="Size of the nucleotides window, default = 10000 ")
-    parser.add_argument("-sf", "--suffix", default='.min10k.', help="suffix to sample files such that the protein file will end with {suffix}proteins.faa."
-                                                                    " for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies")
+    parser.add_argument("-sf", "--suffix", default='', help="suffix to sample files such that the protein file will end with {suffix}proteins.faa."
+                                                                    " for example, .min10k. to get only contigs of length more than 10k. Input '' (default) if none applies")
     parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['Cross_Membrane'],
                         help="The list of features names (according to the names in FeaturesList) that we dont want"
                              "to execute. default: ['Cross_Membrane']")
