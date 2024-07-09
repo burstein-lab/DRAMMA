@@ -129,6 +129,7 @@ Options:
   -e, --by_evalue       Use threshold by e-value (default)
   -s, --by_score        Use threshold by score
   --dif_format_paths    Paths to data in different formats (faa, fa, gff, ffn) (optional, use only if you want to extract the features on a single assembly.)
+  -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies
   -ftd, --features_to_drop List of features to exclude (default: ['Cross_Membrane'])
   -pkl, --pickle_file   Path to pickle file with a FeatureList object (optional, if its not supplied, a new object will be created)
 ```
