@@ -72,24 +72,82 @@ rm -r data.tar.gz*
 
 The main scripts for DRAMMA are:
 
-### 1. run_model.py
+### 1. run_DRAMMA_pipeline.py
 
-This script runs the trained model on input data.
+This script executes all the steps needed to use the trained DRAMMA model on a given data: feature extraction, dataset creation out of all the samples' features, and applying the model on the dataset. Returns the label according to our ARG HMM DB, model probability score, and whether it passed the relevant model score thresholds (0.75 and 0.95, where 0.95 is more strict).
+The script assumes there are four files for each assembly - protein fasta, genes, gff file, and contig file (faa, ffn, gff, fa).
 
 ```
-python run_model.py -pkl <path_to_pickle> -in <input_file> -out <output_file> [options]
+python run_DRAMMA_pipeline.py <input_path> --data_path <data_path> -out <output_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> -pkl <path_to_model_pickle> [options]
 
 Options:
+  --input_path          Full path of the directory with all the assemblies. Not needed if --dif_format_paths is supplied.
+  --dif_format_paths    Paths to data in different formats (faa, fa, gff, ffn) (optional, use only if you want to extract the features on a single assembly.)
+  --data_path           Full path of the directory with all the data needed for feature extraction (feature_extraction directory downloaded from Zenodo)
+  --hmmer_path          Full path to the HMMER's hmmsearch program
+  --mmseqs_path         Full path to the Mmseqs2 program
+  --tmhmm_path          Full path to the tmhmm program
+  --feature_dir         Full path to the directory we want to save our features in (default: "features", new subdirectory of the current directory)
+  -k, --kmer            Run kmers count from 2 to k (default: 4)
+  -lt, --label_threshold Threshold for the proximity feature (default: '1e-10')
+  -t, --threshold_list  List of thresholds for proximity feature (default: [1e-8])
+  -d, --gene_window     Size of the ORFs window (default: 10)
+  -n, --nucleotide_window Size of the nucleotides window (default: 10000)
+  -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. to get only contigs of length more than 10k. Input '' (default value) if none applies
+  -ftd, --features_to_drop List of features to exclude (default: ['Cross_Membrane'])
+  -b, --batch_size      batch size for saving the dataset when the script is run on a directory of multiple samples(default: 0, everything will be saved in a single file)
   -pkl, --pickle        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo)
-  -in, --input_file     Path to the file we want to run the model against
-  -out, --output_file   Path to pkl file we want to save our results in
-  -fp, --filter_pos     Choose this to keep only negative proteins (non-AMRs) (default)
-  -kp, --keep_pos       Choose this to keep both positive (known AMRs) and negative proteins (non-AMRs)
   -sc, --single_class   Choose this to run a binary model (default)
   -mc, --multi_class    Choose this to run a multi_class model
+  -out, --output_file   Path to pkl file we want to save our results in
+  --keep_files          keep all feature files
+  --remove_files        remove all feature files (default)
 ```
 
-### 2. create_model_pkl.py
+### 2. run_features.py
+
+This script extracts features from input data. The script assumes there are four files for each assembly - protein fasta, genes, gff file, and contig file (faa, ffn, gff, fa).
+
+```
+python run_features.py --input_path <input_path> --data_path <data_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> [options]
+
+Options:
+  --input_path          Full path of the directory with all the assemblies. Not needed if --dif_format_paths is supplied.
+  --dif_format_paths    Paths to data in different formats (faa, fa, gff, ffn) (optional, use only if you want to extract the features on a single assembly.)
+  --output_dir          Full path to the directory we want to save our features in (default: "features", new subdirectory of the current directory)
+  --data_path           Full path of the directory with all the data needed for feature extraction (feature_extraction directory downloaded from Zenodo)
+  --hmmer_path          Full path to the HMMER's hmmsearch program
+  --mmseqs_path         Full path to the Mmseqs2 program
+  --tmhmm_path          Full path to the tmhmm program
+  -k, --kmer            Run kmers count from 2 to k (default: 4)
+  -lt, --label_threshold Threshold for the proximity feature (default: '1e-10')
+  -t, --threshold_list  List of thresholds for proximity feature (default: [1e-8])
+  -d, --gene_window     Size of the ORFs window (default: 10)
+  -n, --nucleotide_window Size of the nucleotides window (default: 10000)
+  -e, --by_evalue       Use threshold by e-value (default)
+  -s, --by_score        Use threshold by score
+  -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies
+  -ftd, --features_to_drop List of features to exclude (default: ['Cross_Membrane'])
+  -pkl, --pickle_file   Path to pickle file with a FeatureList object (optional, if its not supplied, a new object will be created)
+```
+
+### 3. train_dataset_creator.py
+
+This script creates a dataset for training the model, either a balanced subset of the proteins or the complete dataset.
+```
+python train_dataset_creator.py -d <directory> -f <fasta_file> [options]
+Options:
+-d, --directory       Directory containing all the feature pkl files created by run_features.py
+-f, --fasta           Path to relevant protein fasta file for de-duplication. only used when all_data is false.
+-wl, --whitelist      Filter which folders to check (default: '' - checks all files and directories in --directory)
+-p, --pumps           Create the pump train set (default: False)
+-ad, --all_data       Create dataset on entire data instead of balanced set (default: False)
+-pkl, --pickle        Save data to pickle instead of tsv (default: True)
+-b, --batch_size      Batch size for saving dataset when all_data=True (default: 0 - everything in one file)
+-c, --columns         JSON file with the columns to include in the dataset (default: '' - use all columns)
+```
+
+### 4. create_model_pkl.py
 
 This script creates a pickle file with all the relevant information for running the model (model, relevant cols, and model score thresholds dictionary).
 
@@ -108,46 +166,25 @@ Options:
   -lc, --label_col      Column to take for labeling (default: 'Updated Resistance Mechanism')
 ```
 
-### 3. run_features.py
+### 5. run_model.py
 
-This script extracts features from input data. The script assumes there are four files for each assembly - protein fasta, genes, gff file, and contig file (faa, ffn, gff, fa).
+This script runs the trained model on input data.
 
 ```
-python run_features.py --input_path <input_path> --data_path <data_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> [options]
+python run_model.py -pkl <path_to_model_pickle> -in <input_file> -out <output_file> [options]
 
 Options:
-  --input_path          Full path of the directory with all the assemblies
-  --data_path           Full path of the directory with all the data needed for feature extraction (feature_extraction directory downloaded from Zenodo)
-  --hmmer_path          Full path to the HMMER's hmmsearch program
-  --mmseqs_path         Full path to the Mmseqs2 program
-  --tmhmm_path          Full path to the tmhmm program
-  -k, --kmer            Run kmers count from 2 to k (default: 4)
-  -lt, --label_threshold Threshold for the proximity feature (default: '1e-10')
-  -t, --threshold_list  List of thresholds for proximity feature (default: [1e-8])
-  -d, --gene_window     Size of the ORFs window (default: 10)
-  -n, --nucleotide_window Size of the nucleotides window (default: 10000)
-  -e, --by_evalue       Use threshold by e-value (default)
-  -s, --by_score        Use threshold by score
-  --dif_format_paths    Paths to data in different formats (faa, fa, gff, ffn) (optional, use only if you want to extract the features on a single assembly.)
-  -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies
-  -ftd, --features_to_drop List of features to exclude (default: ['Cross_Membrane'])
-  -pkl, --pickle_file   Path to pickle file with a FeatureList object (optional, if its not supplied, a new object will be created)
+  -pkl, --pickle        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo)
+  -in, --input_file     Path to the file we want to run the model against
+  -out, --output_file   Path to pkl file we want to save our results in
+  -fp, --filter_pos     Choose this to keep only negative proteins (non-AMRs) (default)
+  -kp, --keep_pos       Choose this to keep both positive (known AMRs) and negative proteins (non-AMRs)
+  -fl, --filter_low_scores   Choose this to only keep proteins that passed the minimal model score according to the model score thresholds dictionary (default)
+  -kl, --keep_low_scores    Choose this to keep the results of proteins that received low model score as well
+  -sc, --single_class   Choose this to run a binary model (default)
+  -mc, --multi_class    Choose this to run a multi_class model
 ```
 
-### 4. train_dataset_creator.py
-This script creates a dataset for training the model, either a balanced subset of the proteins or the complete dataset.
-```
-python train_dataset_creator.py -d <directory> -f <fasta_file> [options]
-Options:
--d, --directory       Directory containing all the feature pkl files created by run_features.py
--f, --fasta           Path to relevant protein fasta file for de-duplication. only used when all_data is false.
--wl, --whitelist      Filter which folders to check (default: '' - checks all files and directories in --directory)
--p, --pumps           Create the pump train set (default: False)
--ad, --all_data       Create dataset on entire data instead of balanced set (default: False)
--pkl, --pickle        Save data to pickle instead of tsv (default: True)
--b, --batch_size      Batch size for saving dataset when all_data=True (default: 0 - everything in one file)
--c, --columns         JSON file with the columns to include in the dataset (default: '' - use all columns)
-```
 
 ## Contact
 For questions about DRAMMA, please contact us:
