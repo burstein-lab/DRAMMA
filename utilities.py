@@ -63,13 +63,9 @@ def getData(contigfasta, genesfasta):
     return pd.DataFrame(all_contigs_and_genes, columns=['contig_name', 'contig_seq', 'genes_list'])
 
 
-def pullseq_runner(location, list_of_ids, output_location):
-    list_of_ids_file = 'list_of_ids'
-    with open(list_of_ids_file, 'w') as file_handler:
-        file_handler.write("\n".join(str(item) for item in list_of_ids))
-    oo = subprocess.run([f'pullseq -i {location} -n {list_of_ids_file} >> {output_location}'], capture_output=True, text=True, shell=True)
-    if oo.stderr:
-        print(oo.stderr)
+def get_filtered_fasta(in_fasta, out_fastas, ids):
+    records = [rec for rec in SeqIO.parse(in_fasta, "fasta") if rec.id in ids]
+    SeqIO.write(records, out_fastas, "fasta")
 
 
 def create_fasta_from_df(df, source_fasta, output_location='output_from_pullseq.fasta', is_contig=False, is_dna=False):
@@ -77,7 +73,7 @@ def create_fasta_from_df(df, source_fasta, output_location='output_from_pullseq.
         os.remove(output_location)
 
     inds = list(set(['_'.join(ind.split('_')[:-1]) for ind in df.index])) if is_contig else df.index.tolist()
-    pullseq_runner(source_fasta, inds, output_location)
+    get_filtered_fasta(source_fasta, output_location, inds)
     print("finished create_fasta_from_df")
     return output_location
 
