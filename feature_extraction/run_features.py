@@ -48,7 +48,7 @@ def main(args):
         feature_lst = pickle.load(open(args.pickle_file, 'rb'))
     else:
         features_to_run = [feat for feat in ALL_FEATURES if feat not in args.features_to_drop]
-        feature_lst = FeatureList(args.data_path, args.hmmer_path, args.mmseqs_path, args.tmhmm_path, args.kmer,
+        feature_lst = FeatureList(args.hmmer_path, args.mmseqs_path, args.tmhmm_path, args.kmer,
                                   args.by_evalue, args.label_threshold, args.threshold_list, args.gene_window,
                                   args.nucleotide_window, features=features_to_run)
 
@@ -67,8 +67,6 @@ if __name__ == '__main__':
     parser.add_argument("--dif_format_paths", nargs='*', type=str,
                         help="The data in the 4 different formats faa,fa,gff,ffn. If we want to only run the script on one sample. if supplied --input_path is not needed.")
     parser.add_argument('--output_dir', type=str, help='the path to the directory we want to save our features in, default: "features" (new sub directory of current directory)', default='features')
-    parser.add_argument('--data_path', type=str, help='full path of the directory with all the data needed for feature extraction.'
-                                                      'Should be feature_extraction dir downloaded from Zonedo')
     parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program.")
     parser.add_argument('--mmseqs_path', type=str, help='full path to the Mmseqs2 program.')
     parser.add_argument('--tmhmm_path', type=str, help='full path to the tmhmm_path program.')

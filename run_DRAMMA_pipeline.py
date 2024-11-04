@@ -59,7 +59,7 @@ def multi_sample_pipeline(args, feature_lst):
 
 def main(args):
     features_to_run = [feat for feat in ALL_FEATURES if feat not in args.features_to_drop]
-    feature_lst = FeatureList(args.data_path, args.hmmer_path, args.mmseqs_path, args.tmhmm_path, args.kmer, True,
+    feature_lst = FeatureList(args.hmmer_path, args.mmseqs_path, args.tmhmm_path, args.kmer, True,
                               args.label_threshold, args.threshold_list, args.gene_window, args.nucleotide_window,
                               features=features_to_run)
     if args.dif_format_paths:
@@ -77,8 +77,6 @@ if __name__ == '__main__':
     parser.add_argument('--input_path', type=str, help='Insert the full path of the wanted directory with all the assemblies. not needed if --dif_format_paths is supplied.')
     parser.add_argument("--dif_format_paths", nargs='*', type=str,
                         help="The data in the 4 different formats faa,fa,gff,ffn. if we want to only run the pipeline on one sample. if supplied --input_path is not needed.")
-    parser.add_argument('--data_path', type=str, help='full path of the directory with all the data needed for feature extraction.'
-                                                      'Should be feature_extraction dir downloaded from Zonedo')
     parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program.")
     parser.add_argument('--mmseqs_path', type=str, help='full path to the Mmseqs2 program.')
     parser.add_argument('--tmhmm_path', type=str, help='full path to the tmhmm program.')
@@ -99,7 +97,7 @@ if __name__ == '__main__':
     # dataset creation
     parser.add_argument("-b", "--batch_size", type=int, default=0, help="batch size for saving dataset for all_data=True. default: 0 (everything will be saved in one file)")
     # Running model
-    parser.add_argument("-pkl", "--pickle", type=str, help="path to pickle with model, relevant cols and thresholds dict.")
+    parser.add_argument("-pkl", "--pickle", default=os.path.join("..", "data", "models", "DRAMMA_AMR_model.pkl"), type=str, help="path to pickle with model, relevant cols and thresholds dict. default: ./data/models/DRAMMA_AMR_model.pkl")
     parser.add_argument("-mc", '--multi_class', dest='multi_class', action='store_true', help='Choose this to run multi_class models. if multi-label is True, this param is irrelevant. default: False (single_class)')
     parser.add_argument("-sc", '--single_class', dest='multi_class', action='store_false', help='Choose this to run single_class model. if multi-label is True, this param is irrelevant. default: False (single_class)')
     # Cleaning up

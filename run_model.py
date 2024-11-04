@@ -62,7 +62,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run given model on the input file and return results of proteins that passed the given threshold')
-    parser.add_argument("-pkl", "--pickle", type=str, help="path to pickle with model, relevant cols and thresholds dict.")
+    parser.add_argument("-pkl", "--pickle", default=os.path.join("..", "data", "models", "DRAMMA_AMR_model.pkl"), type=str, help="path to pickle with model, relevant cols and thresholds dict. default: ./data/models/DRAMMA_AMR_model.pkl")
     parser.add_argument("-in", "--input_file", type=str, help="path to feature file we want to run the model against")
     parser.add_argument("-out", "--output_file", type=str, help="path to pkl file we want to save our results in")
     parser.add_argument("-fp", '--filter_pos', dest='filter_pos', action='store_true', help='Choose this to keep only negative proteins, default: True (filter_pos)')

@@ -16,14 +16,14 @@ from cross_membrane import CrossMembraneFeatures
 INDEX_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'AminoAcidIndexChoosenOnes')
 SMART_GC_DICT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'SmartGC_dict_simple')
 ALL_FEATURES = ['Mmseqs', 'labeling', 'multi_proximity', 'default_multi_proximity', "HTH_domains", 'DNA_KMers', "AA_features", "GC_Content", 'Prot_param', 'SmartGC', 'Smart_AA_Kmers', 'Cross_Membrane']
-
+DATA_PATH = os.path.join("..", 'data', 'feature_extraction')
 
 class FeatureList:
     # IMPORTANT: keep labeling and multi_proximity at the beginning
-    def __init__(self, data_path, hmmer_path, mmseqs_path, tmhmm_path, dna_kmer_size, by_eval, label_threshold, threshold_list, gene_window, nucleotide_window, features=()):
-        tax_data_path = os.path.join(data_path, 'data_for_tax_features')
-        hth_hmm_domains = os.path.join(data_path, 'hmms_for_proximity_features')
-        hmm_dir = os.path.join(data_path, 'Pfam_HTH_domains.hmm')
+    def __init__(self, hmmer_path, mmseqs_path, tmhmm_path, dna_kmer_size, by_eval, label_threshold, threshold_list, gene_window, nucleotide_window, features=()):
+        tax_data_path = os.path.join(DATA_PATH, 'data_for_tax_features')
+        hth_hmm_domains = os.path.join(DATA_PATH, 'hmms_for_proximity_features')
+        hmm_dir = os.path.join(DATA_PATH, 'Pfam_HTH_domains.hmm')
         hmm_db = os.path.join(hmm_dir, 'DRAMMA_ARG_DB.hmm')
         feature_dict = {'labeling': Labeling(hmmer_path, hmm_db, label_threshold, by_eval),
                         'multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, gene_window, nucleotide_window),
