@@ -1,7 +1,7 @@
 import pandas as pd
 from functools import reduce
-from gff_to_df import create_df_from_gff
-from analyze_tblout_result import process_tblout_file
+from .gff_to_df import create_df_from_gff
+from .analyze_tblout_result import process_tblout_file
 from utilities import feature_to_file
 DROP_AMR_FAM_LIST = ['vanA', 'vanB', 'vanC', 'vanD', 'vanH', 'vanR', 'vanS', 'vanT', 'vanW', 'vanX', 'vanY', 'vanZ',
                      'Erm23S_rRNA_methyltrans', 'tet_ribosomoal_protect', 'APH3"']
@@ -15,7 +15,7 @@ COLS = ['passed_threshold', 'query_name', 'query_accession', 'best_eval', 'best_
 def create_hmm_df(gff_df, hmm_file_name, threshold, by_eval):
     hmm_df = process_tblout_file(hmm_file_name, threshold, by_eval)
     hmm_df_filtered = hmm_df[~hmm_df['query_name'].isin(DROP_AMR_FAM_LIST)]
-    merged_df = pd.merge(gff_df, hmm_df_filtered, how='right', on='ID')
+    merged_df = gff_df.set_index('ID').join(hmm_df_filtered.set_index('ID'), how='right').reset_index()
     return merged_df
 
 

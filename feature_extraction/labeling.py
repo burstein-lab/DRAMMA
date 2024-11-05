@@ -1,6 +1,6 @@
-from create_tblout_file import get_tblout_file
+from .create_tblout_file import get_tblout_file
 from utilities import feature_to_file, MLFeature, get_exponent
-from analyze_tblout_result import process_tblout_file
+from .analyze_tblout_result import process_tblout_file
 
 
 class Labeling(MLFeature):

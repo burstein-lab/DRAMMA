@@ -3,7 +3,7 @@ import time
 import pickle
 import os
 from utilities import go_through_files
-from feature_list import FeatureList, ALL_FEATURES
+from .feature_list import FeatureList, ALL_FEATURES
 
 
 def create_features_pkls(feature_lst, dir_path, files_paths, outdir):
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run feature extraction on a given sample or a directory of samples.')
     parser.add_argument('--input_path', type=str, help='Insert the full path of the wanted directory with all the assemblies. not needed if --dif_format_paths is supplied.')
     parser.add_argument("--dif_format_paths", nargs='*', type=str,
-                        help="The data in the 4 different formats faa,fa,gff,ffn. If we want to only run the script on one sample. if supplied --input_path is not needed.")
+                        help="The data in the 4 different formats faa,gff,ffn,fa. If we want to only run the script on one sample. if supplied --input_path is not needed.")
     parser.add_argument('--output_dir', type=str, help='the path to the directory we want to save our features in, default: "features" (new sub directory of current directory)', default='features')
     parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program.")
     parser.add_argument('--mmseqs_path', type=str, help='full path to the Mmseqs2 program.')

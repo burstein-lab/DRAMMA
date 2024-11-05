@@ -2,7 +2,7 @@ from collections import Counter
 from Bio import SeqIO
 import pandas as pd
 import numpy as np
-import aaIndex
+import feature_extraction.aaIndex as aaIndex
 from utilities import feature_to_file, MLFeature
 
 AA_LIST = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']

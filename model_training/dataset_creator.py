@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from AMR_model import AMRModel
+from .AMR_model import AMRModel
 from utilities import parse_query_name, parse_arg_name
 try:
     from sklearn.model_selection import StratifiedGroupKFold as GroupKFold

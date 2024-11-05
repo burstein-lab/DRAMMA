@@ -1,6 +1,7 @@
-from create_tblout_file import get_tblout_file
+import os
+from .create_tblout_file import get_tblout_file
 from utilities import feature_to_file, fill_all_empty_orfs_with_zeros, MLFeature
-from analyze_tblout_result import process_tblout_file
+from .analyze_tblout_result import process_tblout_file
 
 
 class HTHDomainFeatures(MLFeature):

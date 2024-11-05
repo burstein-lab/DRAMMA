@@ -1,7 +1,7 @@
 import pandas as pd
 import os
-from create_tblout_file import get_tblout_file
-from create_proximity_df import calculate_gene_proximity
+from .create_tblout_file import get_tblout_file
+from .create_proximity_df import calculate_gene_proximity
 from utilities import feature_to_file, MLFeature
 
 

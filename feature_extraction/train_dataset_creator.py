@@ -5,7 +5,7 @@ import os
 import argparse
 import subprocess
 from sklearn.utils import shuffle
-from resfam_lists import PUMPS_FAM_HIGH_SEC_LIST, ALL_PUMPS_FAM_LIST, HIGH_SEC_NO_PUMPS_LIST
+from .resfam_lists import PUMPS_FAM_HIGH_SEC_LIST, ALL_PUMPS_FAM_LIST, HIGH_SEC_NO_PUMPS_LIST
 from utilities import getIDs, combine_all_pkls, create_fasta_from_df
 
 

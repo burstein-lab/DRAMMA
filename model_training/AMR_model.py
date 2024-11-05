@@ -1,4 +1,4 @@
-from correlated_features import get_features_to_drop
+from .correlated_features import get_features_to_drop
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
@@ -7,10 +7,13 @@ from sklearn.preprocessing import StandardScaler
 
 
 class AMRModel:
-    def __init__(self, X_train, y_train, selected_features=(), n_feats=0, n_jobs=2, param_dict=None):
+    def __init__(self, X_train, y_train, selected_features=(), n_feats=0, n_jobs=2, param_dict=None, model=None):
         self.features = selected_features if len(selected_features) > 0 else AMRModel.get_best_model_features(X_train, y_train, n=n_feats, param_dict=param_dict, n_jobs=n_jobs)
-        pipe = AMRModel.create_model_pipeline(n_jobs=n_jobs, param_dict=param_dict)
-        self.model = pipe.fit(X_train[self.features], y_train.values.ravel())
+        if model is None:
+            pipe = AMRModel.create_model_pipeline(n_jobs=n_jobs, param_dict=param_dict)
+            self.model = pipe.fit(X_train[self.features], y_train.values.ravel())
+        else: # load existing model
+            self.model = model
 
     @staticmethod
     def create_model_pipeline(number_of_trees=0, n_jobs=1, model='rf', param_dict=None):

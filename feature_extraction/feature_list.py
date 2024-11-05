@@ -1,30 +1,31 @@
 import time
 import os
 from utilities import getIDs, getData
-from mmseqs_taxonomy_distribution import MMseqsTaxonomyFeatures
-from labeling import Labeling
-from multi_proximity_genes import MultiProximityFeatures
-from HTH_domain import HTHDomainFeatures
-from kmers_funcs import KMersFeatures
-from amino_acid_features import AAFeatures
-from GC_content import GCContentFeatures
-from protparam_features import ProtParamsFeatures
-from smartGC import SmartGCFeatures
-from proteins_quality_kmers import SmartAAKmersFeatures
-from cross_membrane import CrossMembraneFeatures
+from .mmseqs_taxonomy_distribution import MMseqsTaxonomyFeatures
+from .labeling import Labeling
+from .multi_proximity_genes import MultiProximityFeatures
+from .HTH_domain import HTHDomainFeatures
+from .kmers_funcs import KMersFeatures
+from .amino_acid_features import AAFeatures
+from .GC_content import GCContentFeatures
+from .protparam_features import ProtParamsFeatures
+from .smartGC import SmartGCFeatures
+from .proteins_quality_kmers import SmartAAKmersFeatures
+from .cross_membrane import CrossMembraneFeatures
+from pathlib import Path
 
 INDEX_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'AminoAcidIndexChoosenOnes')
 SMART_GC_DICT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'SmartGC_dict_simple')
 ALL_FEATURES = ['Mmseqs', 'labeling', 'multi_proximity', 'default_multi_proximity', "HTH_domains", 'DNA_KMers', "AA_features", "GC_Content", 'Prot_param', 'SmartGC', 'Smart_AA_Kmers', 'Cross_Membrane']
-DATA_PATH = os.path.join("..", 'data', 'feature_extraction')
+DATA_PATH = os.path.join(Path(__name__).parent.absolute(), 'data', 'feature_extraction')
 
 class FeatureList:
     # IMPORTANT: keep labeling and multi_proximity at the beginning
     def __init__(self, hmmer_path, mmseqs_path, tmhmm_path, dna_kmer_size, by_eval, label_threshold, threshold_list, gene_window, nucleotide_window, features=()):
         tax_data_path = os.path.join(DATA_PATH, 'data_for_tax_features')
-        hth_hmm_domains = os.path.join(DATA_PATH, 'hmms_for_proximity_features')
-        hmm_dir = os.path.join(DATA_PATH, 'Pfam_HTH_domains.hmm')
+        hmm_dir = os.path.join(DATA_PATH, 'hmms_for_proximity_features')
         hmm_db = os.path.join(hmm_dir, 'DRAMMA_ARG_DB.hmm')
+        hth_hmm_domains = os.path.join(DATA_PATH, 'Pfam_HTH_domains.hmm')
         feature_dict = {'labeling': Labeling(hmmer_path, hmm_db, label_threshold, by_eval),
                         'multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, gene_window, nucleotide_window),
                         'default_multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, delete_files=True),  # 5, 5000

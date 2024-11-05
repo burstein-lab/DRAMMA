@@ -4,6 +4,7 @@ import numpy as np
 import pickle
 import os
 from model_training.dataset_creator import get_test_df
+from model_training.AMR_model import AMRModel
 
 LABEL_FILE = os.path.join('data', 'arg_mech_drugs.tsv')
 
@@ -54,15 +55,15 @@ def get_model_results_multi_class(pkl, input_file, label_col="Updated Resistance
 
 def main(args):
     if args.multi_class:
-        res_df = get_model_results_multi_class(args.pickle, args.input_file)
+        res_df = get_model_results_multi_class(args.model, args.input_file)
     else:
-        res_df = get_model_results_single_label(args.input_file, args.pickle, args.filter_pos, args.filter_low_scores)
+        res_df = get_model_results_single_label(args.input_file, args.model, args.filter_pos, args.filter_low_scores)
     res_df.to_pickle(args.output_file)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run given model on the input file and return results of proteins that passed the given threshold')
-    parser.add_argument("-pkl", "--pickle", default=os.path.join("..", "data", "models", "DRAMMA_AMR_model.pkl"), type=str, help="path to pickle with model, relevant cols and thresholds dict. default: ./data/models/DRAMMA_AMR_model.pkl")
+    parser.add_argument("--model", default=os.path.join("data", "models", "DRAMMA_AMR_model.pkl"), type=str, help="path to pickle with model, relevant cols and thresholds dict. default: ./data/models/DRAMMA_AMR_model.pkl")
     parser.add_argument("-in", "--input_file", type=str, help="path to feature file we want to run the model against")
     parser.add_argument("-out", "--output_file", type=str, help="path to pkl file we want to save our results in")
     parser.add_argument("-fp", '--filter_pos', dest='filter_pos', action='store_true', help='Choose this to keep only negative proteins, default: True (filter_pos)')

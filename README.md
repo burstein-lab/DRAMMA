@@ -78,7 +78,7 @@ This script executes all the steps needed to use the trained DRAMMA model on a g
 The script assumes there are four files for each assembly - protein fasta, genes, gff file, and contig file (faa, ffn, gff, fa).
 
 ```
-python run_DRAMMA_pipeline.py <input_path> -out <output_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> -pkl <path_to_model_pickle> [options]
+python run_DRAMMA_pipeline.py <input_path> -out <output_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> --model <path_to_model_pickle> [options]
 
 Options:
   --input_path          Full path of the directory with all the assemblies. Not needed if --dif_format_paths is supplied.
@@ -95,7 +95,7 @@ Options:
   -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. to get only contigs of length more than 10k. Input '' (default value) if none applies
   -ftd, --features_to_drop List of features to exclude (default: ['Cross_Membrane'])
   -b, --batch_size      batch size for saving the dataset when the script is run on a directory of multiple samples(default: 0, everything will be saved in a single file)
-  -pkl, --pickle        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
+  --model        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
   -sc, --single_class   Choose this to run a binary model (default)
   -mc, --multi_class    Choose this to run a multi_class model
   -out, --output_file   Path to pkl file we want to save our results in
@@ -169,10 +169,10 @@ Options:
 This script runs the trained model on input data.
 
 ```
-python run_model.py -pkl <path_to_model_pickle> -in <input_file> -out <output_file> [options]
+python run_model.py --model <path_to_model_pickle> -in <input_file> -out <output_file> [options]
 
 Options:
-  -pkl, --pickle        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
+  --model        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
   -in, --input_file     Path to the file we want to run the model against
   -out, --output_file   Path to pkl file we want to save our results in
   -fp, --filter_pos     Choose this to keep only negative proteins (non-AMRs) (default)
