@@ -27,11 +27,14 @@ def get_result_df(model, rel_cols, X_test, y_test, thresholds_dict, filter_pos=T
     return result_df
 
 
+def load_model_from_pickle(model, features):
+    return AMRModel(None, None, features, model=model)
+
+
 def get_model_results_single_label(input_file, pkl, filter_pos=True, filter_low_scores=True):
     with open(pkl, "rb") as f_in:
-        data_objs = [pickle.load(f_in) for i in range(2)]
-        model_obj, threshold_dict = data_objs
-        model, rel_cols = model_obj.model, model_obj.features
+        data_objs = [pickle.load(f_in) for i in range(3)]
+        model, rel_cols, threshold_dict = data_objs
 
     X_test, y_test = get_test_df(input_file)
     res_df = get_result_df(model, rel_cols, X_test, y_test, threshold_dict, filter_pos=filter_pos, filter_low_scores=filter_low_scores)
@@ -40,9 +43,8 @@ def get_model_results_single_label(input_file, pkl, filter_pos=True, filter_low_
 
 def get_model_results_multi_class(pkl, input_file, label_col="Updated Resistance Mechanism"):
     with open(pkl, "rb") as f_in:
-        data_objs = [pickle.load(f_in) for i in range(2)]
-        model_obj, classes = data_objs
-        model, rel_cols = model_obj.model, model_obj.features
+        data_objs = [pickle.load(f_in) for i in range(3)]
+        model, rel_cols, classes = data_objs
         vfunc = np.vectorize(lambda x: classes[x])
 
     X_test, y_test = get_test_df(input_file, new_labels_file=LABEL_FILE, label_column_name=label_col)

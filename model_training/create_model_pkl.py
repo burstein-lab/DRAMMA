@@ -35,7 +35,7 @@ def main(args, param_dict, selected_feats):
         X_train, y_train = split_the_data(dataset)
         amr_model = AMRModel(X_train, y_train, selected_feats, n_feats=args.n, n_jobs=args.n_jobs, param_dict=param_dict)
         log_stats("Finished model training")
-        data_objs = [amr_model, labels, threshold_dict]
+        data_objs = [amr_model.model, amr_model.features, labels, threshold_dict]
 
         if args.test_set:
             X_test, y_test = get_test_df(args.test_set, new_labels_file=LABEL_FILE, label_column_name=args.label_col, label_lst=labels, drop_zero=True)
@@ -54,7 +54,7 @@ def main(args, param_dict, selected_feats):
         X_train, y_train = split_the_data(get_dataset(args.input_path)[0])
         amr_model = AMRModel(X_train, y_train, selected_feats, n_feats=args.n, n_jobs=args.n_jobs, param_dict=param_dict)
         log_stats("Finished model training")
-        data_objs = [amr_model, threshold_dict]
+        data_objs = [amr_model.model, amr_model.features, threshold_dict]
 
         if args.test_set:
             X_test, y_test = get_test_df(args.test_set)
