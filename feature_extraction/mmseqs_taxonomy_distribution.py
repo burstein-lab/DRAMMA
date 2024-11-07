@@ -90,18 +90,18 @@ class MMseqsTaxonomyFeatures(MLFeature):
 
     def __create_search_command(self, query_db, mmseqs_output_file):
         mmseq_output = mmseqs_output_file.replace(".tsv", "")
+        tmp_dir = os.path.join(self.tmp_dir, str(time.time()))
 
         if self.keep_files and os.path.exists(mmseqs_output_file):  # if result file exists, no need to search again
             command = f"""{self.mmseqs} convertalis {query_db} {self.db_path} {mmseq_output} {mmseqs_output_file} """ \
                       f""" --format-output "query,target,theader,evalue" """
         else:
-            tmp_dir = os.path.join(self.tmp_dir, str(time.time()))
             command = f"""{self.mmseqs} search {query_db} {self.db_path} {mmseq_output} {tmp_dir} --search-type 1 """ \
                       f"""-e {self.threshold} --threads {self.ncpus} --disk-space-limit {self.gmem}G """ \
                       f"""--alignment-mode 1 --remove-tmp-files 1 && """ \
                       f"""{self.mmseqs} convertalis {query_db} {self.db_path} {mmseq_output} {mmseqs_output_file} """ \
                       f""" --format-output "query,target,theader,evalue" """
-        return command
+        return command, tmp_dir
 
     def __run_dbs_search(self, query_db):
         dbs_dict = {}
@@ -115,9 +115,9 @@ class MMseqsTaxonomyFeatures(MLFeature):
             os.mkdir(res_dir_path)
 
         mmseqs_output_file = self.__get_mmseqs_out_filename(query_db, res_dir_path)
-        command = self.__create_search_command(query_db, mmseqs_output_file)
+        command, tmp_dir = self.__create_search_command(query_db, mmseqs_output_file)
         os.system(command)
-        return mmseqs_output_file, command
+        return mmseqs_output_file, command, tmp_dir
 
     def __process_result_df_by_db(self, db_name, df):
         if len(df) == 0:  # if no results were found, so we only change the column names
@@ -187,9 +187,10 @@ class MMseqsTaxonomyFeatures(MLFeature):
         output_df = ids_df.set_index("ID") if ids_df is not None else pd.DataFrame([]).rename_axis('ID')
 
         # running mmseqs search against the united DB
-        mmseqs_output_file, command = self.__run_dbs_search(query_db)
+        mmseqs_output_file, command, tmp_dir = self.__run_dbs_search(query_db)
         # process the db result file
         output_df = self.__process_run(mmseqs_output_file, command, output_df)
+        os.system(f"rm -r {tmp_dir}")
 
         # making 'ID' into column instead of Index and filling empty values with zeros
         output_df = output_df.reset_index().rename(columns={"index": "ID"}).fillna(0)
@@ -229,7 +230,8 @@ class MMseqsTaxonomyFeatures(MLFeature):
         output_df = self.__add_general_features(output_df)
 
         # removing files related to the mmseqs query DB that was created and tmp files created by mmseqs
-        remove_tmp_files(query_db)
+        if not self.keep_files:
+            remove_tmp_files(query_db)
 
         if "level_0" in output_df.columns:
             output_df = output_df.drop(columns=["ID"]).rename(columns={"level_0": "ID"})

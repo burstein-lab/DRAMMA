@@ -86,4 +86,4 @@ class SmartGCFeatures(MLFeature):
         :param data: a dataframe containing contig name, seq, genes list
         :param out_dir: path to output directory
         """
-        feature_to_file('Smart_GC')(self.get_features, dir_path=out_dir)(fa, data['genes_list'])
+        feature_to_file('Smart_GC', dir_path=out_dir)(self.get_features)(fa, data['genes_list'])

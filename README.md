@@ -30,7 +30,7 @@ DRAMMA (Detection of Resistance to AntiMicrobials  using Machine-learning Approa
 ### Requirements
 
 ### Python and Libraries
-- Python 3.10+
+- Python 3.9
 - pandas
 - numpy
 - scikit-learn
@@ -75,14 +75,14 @@ The main scripts for DRAMMA are:
 ### 1. run_DRAMMA_pipeline.py
 
 This script executes all the steps needed to use the trained DRAMMA model on a given data: feature extraction, dataset creation out of all the samples' features, and applying the model on the dataset. Returns the label according to our ARG HMM DB, model probability score, and whether it passed the relevant model score thresholds (0.75 and 0.95, where 0.95 is more strict).
-The script assumes there are four files for each assembly - protein fasta, genes, gff file, and contig file (faa, ffn, gff, fa).
+The script assumes there are four files for each assembly - protein fasta, gff file, genes, and contig file (faa, gff, ffn, fa).
 
 ```
 python run_DRAMMA_pipeline.py <input_path> -out <output_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> --model <path_to_model_pickle> [options]
 
 Options:
   --input_path          Full path of the directory with all the assemblies. Not needed if --dif_format_paths is supplied.
-  --dif_format_paths    Paths to data in different formats (faa, fa, gff, ffn) (optional, use only if you want to extract the features on a single assembly.)
+  --dif_format_paths    Paths to data in different formats (faa, gff, ffn, fa) (optional, use only if you want to extract the features on a single assembly.)
   --hmmer_path          Full path to the HMMER's hmmsearch program
   --mmseqs_path         Full path to the Mmseqs2 program
   --tmhmm_path          Full path to the tmhmm program
@@ -105,14 +105,14 @@ Options:
 
 ### 2. run_features.py
 
-This script extracts features from input data. The script assumes there are four files for each assembly - protein fasta, genes, gff file, and contig file (faa, ffn, gff, fa).
+This script extracts features from input data. The script assumes there are four files for each assembly -  protein fasta, gff file, genes, and contig file (faa, gff, ffn, fa).
 
 ```
-python run_features.py --input_path <input_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> [options]
+python feature_extraction/run_features.py --input_path <input_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> [options]
 
 Options:
   --input_path          Full path of the directory with all the assemblies. Not needed if --dif_format_paths is supplied.
-  --dif_format_paths    Paths to data in different formats (faa, fa, gff, ffn) (optional, use only if you want to extract the features on a single assembly.)
+  --dif_format_paths    Paths to data in different formats (faa, gff, ffn, fa) (optional, use only if you want to extract the features on a single assembly.)
   --output_dir          Full path to the directory we want to save our features in (default: "features", new subdirectory of the current directory)
   --hmmer_path          Full path to the HMMER's hmmsearch program
   --mmseqs_path         Full path to the Mmseqs2 program
@@ -133,14 +133,14 @@ Options:
 
 This script creates a dataset for training the model, either a balanced subset of the proteins or the complete dataset.
 ```
-python train_dataset_creator.py -d <directory> -f <fasta_file> [options]
+python feature_extraction/train_dataset_creator.py -d <directory> -f <fasta_file> [options]
 Options:
 -d, --directory       Directory containing all the feature pkl files created by run_features.py
 -f, --fasta           Path to relevant protein fasta file for de-duplication. only used when all_data is false.
 -wl, --whitelist      Filter which folders to check (default: '' - checks all files and directories in --directory)
 -p, --pumps           Create the pump train set (default: False)
 -ad, --all_data       Create dataset on entire data instead of balanced set (default: False)
--pkl, --pickle        Save data to pickle instead of tsv (default: True)
+-pkl, --pickle        Save data to pickle instead of tsv (default: True). If all_data=True and batch_size=0, this parameter is ignored, and the data is saved as a tsv.gz.
 -b, --batch_size      Batch size for saving dataset when all_data=True (default: 0 - everything in one file)
 -c, --columns         JSON file with the columns to include in the dataset (default: '' - use all columns)
 ```
@@ -150,7 +150,7 @@ Options:
 This script creates a pickle file with all the relevant information for running the model (model, relevant cols, and model score thresholds dictionary).
 
 ```
-python create_model_pkl.py -i <input_path> -o <output_path> [options]
+python model_training/create_model_pkl.py -i <input_path> -o <output_path> [options]
 
 Options:
   -i, --input_path      Path to input dataset
@@ -175,10 +175,10 @@ Options:
   --model        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
   -in, --input_file     Path to the file we want to run the model against
   -out, --output_file   Path to pkl file we want to save our results in
-  -fp, --filter_pos     Choose this to keep only negative proteins (non-AMRs) (default)
-  -kp, --keep_pos       Choose this to keep both positive (known AMRs) and negative proteins (non-AMRs)
-  -fl, --filter_low_scores   Choose this to only keep proteins that passed the minimal model score according to the model score thresholds dictionary (default)
-  -kl, --keep_low_scores    Choose this to keep the results of proteins that received low model score as well
+  -fp, --filter_pos     Choose this to keep only negative proteins (non-AMRs) 
+  -kp, --keep_pos       Choose this to keep both positive (known AMRs) and negative proteins (non-AMRs) (default)
+  -fl, --filter_low_scores   Choose this to only keep proteins that passed the minimal model score according to the model score thresholds dictionary 
+  -kl, --keep_low_scores    Choose this to keep the results of proteins that received low model score as well (default)
   -sc, --single_class   Choose this to run a binary model (default)
   -mc, --multi_class    Choose this to run a multi_class model
 ```

@@ -5,7 +5,9 @@ import os
 import argparse
 import subprocess
 from sklearn.utils import shuffle
-from .resfam_lists import PUMPS_FAM_HIGH_SEC_LIST, ALL_PUMPS_FAM_LIST, HIGH_SEC_NO_PUMPS_LIST
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from feature_extraction.resfam_lists import PUMPS_FAM_HIGH_SEC_LIST, ALL_PUMPS_FAM_LIST, HIGH_SEC_NO_PUMPS_LIST
 from utilities import getIDs, combine_all_pkls, create_fasta_from_df
 
 
@@ -180,7 +182,7 @@ if __name__ == '__main__':
     parser.add_argument("-ad", "--all_data", type=str, default="False",
                         help="Should we create a balanced dataset (-ad False, default) or on the entire data")
     parser.add_argument("-pkl", "--pickle", type=str, default="True",
-                        help="Should we save data to pickle (-pkl True, default) or save as tsv")
+                        help="Should we save data to pickle (-pkl True, default) or save as tsv. If all_data is true and batch_size=0, this param is ignored, and saved as a tsv")
     parser.add_argument("-b", "--batch_size", type=int, default=0, help="batch size for saving dataset for all_data=True."
                                                                         " default: 0 (everything will be saved in one file)")
     parser.add_argument("-c", "--columns", help="JSON file with the columns we want in our dataset. if empty, "

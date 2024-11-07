@@ -1,9 +1,13 @@
+import warnings
+warnings.filterwarnings('ignore')
 import argparse
 import time
 import pickle
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utilities import go_through_files
-from .feature_list import FeatureList, ALL_FEATURES
+from feature_extraction.feature_list import FeatureList, ALL_FEATURES
 
 
 def create_features_pkls(feature_lst, dir_path, files_paths, outdir):
@@ -17,7 +21,7 @@ def create_features_pkls(feature_lst, dir_path, files_paths, outdir):
     :return: Does not return anything. Creates pkl files in the current directory
     """
     all_start = time.time()
-    if dir_path in files_paths[0]:  # files already have full path
+    if not dir_path or dir_path in files_paths[0]:  # files already have full path
         feature_lst.run_features(f'{files_paths[0]}', f'{files_paths[1]}', f'{files_paths[2]}', f'{files_paths[3]}', out_dir=outdir, do_print=True)
     else:
         feature_lst.run_features(os.path.join(dir_path, files_paths[0]), os.path.join(dir_path, files_paths[1]),
