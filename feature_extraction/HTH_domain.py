@@ -5,13 +5,14 @@ from .analyze_tblout_result import process_tblout_file
 
 
 class HTHDomainFeatures(MLFeature):
-    def __init__(self, hmmer_path, hmm_dir, threshold=50, delete_files=True):
+    def __init__(self, hmmer_path, hmm_dir, threshold=50, n_cpus=3, delete_files=True):
         """
         :param hmm_db: the database to run the hmm against - hmm of HTH
         """
         self.hmmer_path = hmmer_path
         self.hmm_dir = hmm_dir
         self.threshold = threshold
+        self.n_cpus = n_cpus
         self.delete_files = delete_files
 
     def get_features(self, fasta_file, ids):
@@ -21,7 +22,7 @@ class HTHDomainFeatures(MLFeature):
             :param ids: a datarame with the list of the names of all the genes in the fasta file
             :return: dataframe
             '''
-        hmm_tblout = get_tblout_file(self.hmmer_path, self.hmm_dir, fasta_file)
+        hmm_tblout = get_tblout_file(self.hmmer_path, self.hmm_dir, fasta_file, cpu=self.n_cpus)
         hmm_df = process_tblout_file(hmm_tblout, self.threshold, by_e_value=False, only_higher_than_threshold=False)
         if self.delete_files:
             os.remove(hmm_tblout)

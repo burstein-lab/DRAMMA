@@ -4,16 +4,17 @@ from .analyze_tblout_result import process_tblout_file
 
 
 class Labeling(MLFeature):
-    def __init__(self, hmmer_path, hmm_db, threshold, by_eval, res_name='labeling'):
+    def __init__(self, hmmer_path, hmm_db, threshold, by_eval, n_cpus=3, res_name='labeling'):
         self.hmmer_path = hmmer_path
         self.hmm_db = hmm_db
         self.threshold = threshold
         self.by_eval = by_eval
+        self.n_cpus = n_cpus
         self.res_name = res_name
 
     def get_features(self, fasta_file, IDs):
         print(f'fasta file is: {fasta_file}')
-        hmm_tblout = get_tblout_file(self.hmmer_path, self.hmm_db, fasta_file)  # returns HMM search results
+        hmm_tblout = get_tblout_file(self.hmmer_path, self.hmm_db, fasta_file, cpu=self.n_cpus)  # returns HMM search results
         print(f'tblout file is: {hmm_tblout}')
         hmm_df = process_tblout_file(hmm_tblout, self.threshold, by_e_value=self.by_eval)  # turns it to DF
         hmm_df['passed threshold'] = True

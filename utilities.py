@@ -4,6 +4,7 @@ import re
 import pickle
 import mpmath as math
 import subprocess
+import glob
 from abc import ABC, abstractmethod
 import os
 from functools import wraps
@@ -64,16 +65,24 @@ def getData(contigfasta, genesfasta):
 
 
 def get_filtered_fasta(in_fasta, out_fastas, ids):
-    records = [rec for rec in SeqIO.parse(in_fasta, "fasta") if rec.id in ids]
+    records = filter_fasta(in_fasta, ids)
     SeqIO.write(records, out_fastas, "fasta")
 
 
-def create_fasta_from_df(df, source_fasta, output_location='output_from_pullseq.fasta', is_contig=False, is_dna=False):
+def filter_fasta(in_fasta, ids):
+    return [rec for rec in SeqIO.parse(in_fasta, "fasta") if rec.id in ids]
+
+
+def create_fasta_from_df(df, source_path, output_location='relevant_seqs.fasta', suffix='.min10k.proteins.faa', is_contig=False):
     if os.path.exists(output_location):
         os.remove(output_location)
-
     inds = list(set(['_'.join(ind.split('_')[:-1]) for ind in df.index])) if is_contig else df.index.tolist()
-    get_filtered_fasta(source_fasta, output_location, inds)
+    if os.path.isdir(source_path):  # given a directory with files instead of a single file
+        rel_fastas = glob.glob(os.path.join(source_path, f'*{suffix}'))
+        recs = [filter_fasta(fasta, inds) for fasta in rel_fastas]
+        SeqIO.write([item for sublist in recs for item in sublist], output_location, "fasta")
+    else:
+        get_filtered_fasta(source_path, output_location, inds)
     print("finished create_fasta_from_df")
     return output_location
 
@@ -186,7 +195,7 @@ def results_to_file(df, file_path, feature_name, directory):
 
 
 def results_to_csv(df, file_path, feature_name, directory):
-    filename =  os.path.join(directory, f'{str(Path(file_path).stem)}.{feature_name}.tsv')
+    filename = os.path.join(directory, f'{str(Path(file_path).stem)}.{feature_name}.tsv')
     df.to_csv(filename, sep='\t', float_format='%.2f')
 
 

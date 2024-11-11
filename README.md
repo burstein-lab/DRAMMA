@@ -44,6 +44,7 @@ DRAMMA (Detection of Resistance to AntiMicrobials  using Machine-learning Approa
 - HMMER version 3.2.1
 - TMHMM 2.0c
 - MMseqs2
+- cd-hit version 4.6
 
 Please ensure these external programs are installed and accessible in your system's PATH, or provide their full paths when running the scripts.
 
@@ -75,7 +76,7 @@ The main scripts for DRAMMA are:
 ### 1. run_DRAMMA_pipeline.py
 
 This script executes all the steps needed to use the trained DRAMMA model on a given data: feature extraction, dataset creation out of all the samples' features, and applying the model on the dataset. Returns the label according to our ARG HMM DB, model probability score, and whether it passed the relevant model score thresholds (0.75 and 0.95, where 0.95 is more strict).
-The script assumes there are four files for each assembly - protein fasta, gff file, genes, and contig file (faa, gff, ffn, fa).
+The script assumes there are four files for each assembly - protein fasta, gff file, genes, and contig file ('*proteins.faa', '*.gff', '*genes.ffn', '*fa').
 
 ```
 python run_DRAMMA_pipeline.py <input_path> -out <output_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> --model <path_to_model_pickle> [options]
@@ -92,8 +93,9 @@ Options:
   -t, --threshold_list  List of thresholds for proximity feature (default: [1e-8])
   -d, --gene_window     Size of the ORFs window (default: 10)
   -n, --nucleotide_window Size of the nucleotides window (default: 10000)
+  --ncpus               Number of cpus to use for feature extraction (default: 64)
   -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. to get only contigs of length more than 10k. Input '' (default value) if none applies
-  -ftd, --features_to_drop List of features to exclude (default: ['Cross_Membrane'])
+  -ftd, --features_to_drop List of features to exclude (default: ['CARD_labeling', 'DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'])
   -b, --batch_size      batch size for saving the dataset when the script is run on a directory of multiple samples(default: 0, everything will be saved in a single file)
   --model        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
   -sc, --single_class   Choose this to run a binary model (default)
@@ -105,7 +107,7 @@ Options:
 
 ### 2. run_features.py
 
-This script extracts features from input data. The script assumes there are four files for each assembly -  protein fasta, gff file, genes, and contig file (faa, gff, ffn, fa).
+This script extracts features from input data. The script assumes there are four files for each assembly -  protein fasta, gff file, genes, and contig file ('*proteins.faa', '*.gff', '*genes.ffn', '*fa').
 
 ```
 python feature_extraction/run_features.py --input_path <input_path> --hmmer_path <path_to_hmmer> --mmseqs_path <path_to_mmseqs> --tmhmm_path <path_to_tmhmm> [options]
@@ -122,10 +124,11 @@ Options:
   -t, --threshold_list  List of thresholds for proximity feature (default: [1e-8])
   -d, --gene_window     Size of the ORFs window (default: 10)
   -n, --nucleotide_window Size of the nucleotides window (default: 10000)
+  --ncpus               Number of cpus to use for feature extraction (default: 64)
   -e, --by_evalue       Use threshold by e-value (default)
   -s, --by_score        Use threshold by score
   -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies
-  -ftd, --features_to_drop List of features to exclude (default: ['Cross_Membrane'])
+  -ftd, --features_to_drop List of features to exclude (default: ['CARD_labeling', 'DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'])
   -pkl, --pickle_file   Path to pickle file with a FeatureList object (optional, if its not supplied, a new object will be created)
 ```
 
@@ -133,10 +136,11 @@ Options:
 
 This script creates a dataset for training the model, either a balanced subset of the proteins or the complete dataset.
 ```
-python feature_extraction/train_dataset_creator.py -d <directory> -f <fasta_file> [options]
+python feature_extraction/train_dataset_creator.py -d <directory> -f <fasta_file> --cdhit_path <path_to_cdhit> [options]
 Options:
 -d, --directory       Directory containing all the feature pkl files created by run_features.py
 -f, --fasta           Path to relevant protein fasta file for de-duplication. only used when all_data is false.
+--cdhit_path          Full path to the cd-hit program
 -wl, --whitelist      Filter which folders to check (default: '' - checks all files and directories in --directory)
 -p, --pumps           Create the pump train set (default: False)
 -ad, --all_data       Create dataset on entire data instead of balanced set (default: False)

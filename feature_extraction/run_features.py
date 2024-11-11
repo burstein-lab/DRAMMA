@@ -54,7 +54,7 @@ def main(args):
         features_to_run = [feat for feat in ALL_FEATURES if feat not in args.features_to_drop]
         feature_lst = FeatureList(args.hmmer_path, args.mmseqs_path, args.tmhmm_path, args.kmer,
                                   args.by_evalue, args.label_threshold, args.threshold_list, args.gene_window,
-                                  args.nucleotide_window, features=features_to_run)
+                                  args.nucleotide_window, features=features_to_run, n_cpus=args.ncpus)
 
     if args.dif_format_paths:
         create_features_pkls(feature_lst, args.input_path, args.dif_format_paths, args.output_dir)
@@ -80,8 +80,8 @@ if __name__ == '__main__':
     parser.add_argument("-t", "--threshold_list", nargs='*', type=str, default=['1e-8'],
                         help="Thresholds for the proximity feature - hmm comparison, default=['1e-8']")
     parser.add_argument("-d", "--gene_window", type=int, default=10, help="Size of the ORFs window, default=10")
-    parser.add_argument("-n", "--nucleotide_window", type=int, default=10000,
-                        help="Size of the nucleotides window, default=10000")
+    parser.add_argument("-n", "--nucleotide_window", type=int, default=10000, help="Size of the nucleotides window, default=10000")
+    parser.add_argument("--ncpus", type=int, default=64, help="Number of cpus to use for feature extraction, default=64")
     parser.add_argument("-e", "--by_evalue", action='store_true', dest='by_evalue',
                         help="choose this to use a threshold by e value (default). use --by_score for score threshold")
     parser.add_argument("-s", "--by_score", action='store_false', dest='by_evalue',
@@ -89,9 +89,9 @@ if __name__ == '__main__':
     parser.add_argument("-sf", "--suffix", default='.min10k.', help="suffix to sample files such that the protein file will end with {suffix}proteins.faa."
                                                                     " for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies")
 
-    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['Cross_Membrane'],
+    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['CARD_labeling', 'DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'],
                         help="The list of features names (according to the names in FeaturesList) that we dont want"
-                             "to execute. default: ['Cross_Membrane']")
+                             "to execute. default: ['CARD_labeling', 'DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC']")
     parser.add_argument("-pkl", "--pickle_file", help="path to pickle file with a FeatureList object. default: '' "
                                                       "(no file, therefore a new object is created)",  type=str, default='')
     parser.set_defaults(by_evalue=True)

@@ -63,7 +63,7 @@ def main(args):
     features_to_run = [feat for feat in ALL_FEATURES if feat not in args.features_to_drop]
     feature_lst = FeatureList(args.hmmer_path, args.mmseqs_path, args.tmhmm_path, args.kmer, True,
                               args.label_threshold, args.threshold_list, args.gene_window, args.nucleotide_window,
-                              features=features_to_run)
+                              features=features_to_run, n_cpus=args.ncpus)
     if args.dif_format_paths:
         res = single_sample_pipeline(args, feature_lst)
     else:
@@ -85,17 +85,17 @@ if __name__ == '__main__':
     parser.add_argument('--feature_dir', type=str, help='the path to the directory we want to save our features in, default: "features" (new sub directory of current directory)', default='features')
     parser.add_argument("-k", "--kmer", type=int, default=4, help="It will run the kmers count from 2 to k, default=4")
     parser.add_argument("-lt", "--label_threshold", type=str, default="1e-10",
-                        help="Threshold for the proximity feature -  hmm comparison, default = 0.000001")
+                        help="Threshold for the proximity feature -  hmm comparison, default=0.000001")
     parser.add_argument("-t", "--threshold_list", nargs='*', type=str, default=['1e-8'],
-                        help="Threshold for the proximity feature -  hmm comparison, default = ['1e-8']")
-    parser.add_argument("-d", "--gene_window", type=int, default=10, help="Size of the ORFs window, default = 10")
-    parser.add_argument("-n", "--nucleotide_window", type=int, default=10000,
-                        help="Size of the nucleotides window, default = 10000 ")
+                        help="Threshold for the proximity feature -  hmm comparison, default=['1e-8']")
+    parser.add_argument("-d", "--gene_window", type=int, default=10, help="Size of the ORFs window, default=10")
+    parser.add_argument("-n", "--nucleotide_window", type=int, default=10000, help="Size of the nucleotides window, default=10000")
+    parser.add_argument("--ncpus", type=int, default=64, help="Number of cpus to use for feature extraction, default=64")
     parser.add_argument("-sf", "--suffix", default='', help="suffix to sample files such that the protein file will end with {suffix}proteins.faa."
                                                                     " for example, .min10k. to get only contigs of length more than 10k. Input '' (default) if none applies")
-    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['Cross_Membrane'],
+    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['CARD_labeling', 'DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'],
                         help="The list of features names (according to the names in FeaturesList) that we dont want"
-                             "to execute. default: ['Cross_Membrane']")
+                             "to execute. default: ['CARD_labeling', 'DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC']")
     # dataset creation
     parser.add_argument("-b", "--batch_size", type=int, default=0, help="batch size for saving dataset for all_data=True. default: 0 (everything will be saved in one file)")
     # Running model

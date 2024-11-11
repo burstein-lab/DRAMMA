@@ -11,11 +11,12 @@ FILE_TO_DB_NAME = {'Acrs': 'Acrs_HMM', 'Antirestriction_genes': 'Antirestriction
 
 
 class MultiProximityFeatures(MLFeature):
-    def __init__(self, hmmer_path, hmm_dir, threshold_list, by_eval, gene_window=5, nucleotide_window=5000, delete_files=False):
+    def __init__(self, hmmer_path, hmm_dir, threshold_list, by_eval, gene_window=5, nucleotide_window=5000, n_cpus=3, delete_files=False):
         self.hmmer_path = hmmer_path
         self.hmm_dir = hmm_dir
         self.threshold_list = threshold_list
         self.by_eval = by_eval
+        self.n_cpus = n_cpus
         self.gene_window = gene_window
         self.nucleotide_window = nucleotide_window
         self.delete_files = delete_files
@@ -40,7 +41,7 @@ class MultiProximityFeatures(MLFeature):
         for hmm_db in os.listdir(self.hmm_dir):
             hmm_db_name = FILE_TO_DB_NAME.get(hmm_db.replace('.hmm', ''), hmm_db.replace('.hmm', ''))
             hmm_file = os.path.join(self.hmm_dir, hmm_db)
-            tblout = get_tblout_file(self.hmmer_path, hmm_file, proteins_fasta)
+            tblout = get_tblout_file(self.hmmer_path, hmm_file, proteins_fasta, cpu=self.n_cpus)
 
             one_df = calculate_gene_proximity(gff, tblout, hmm_db_name, self.threshold_list, self.by_eval,
                                                   self.gene_window, self.nucleotide_window)

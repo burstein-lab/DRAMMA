@@ -21,18 +21,18 @@ DATA_PATH = os.path.join(Path(__name__).parent.absolute(), 'data', 'feature_extr
 
 class FeatureList:
     # IMPORTANT: keep labeling and multi_proximity at the beginning
-    def __init__(self, hmmer_path, mmseqs_path, tmhmm_path, dna_kmer_size, by_eval, label_threshold, threshold_list, gene_window, nucleotide_window, features=()):
+    def __init__(self, hmmer_path, mmseqs_path, tmhmm_path, dna_kmer_size, by_eval, label_threshold, threshold_list, gene_window, nucleotide_window, n_cpus=3, features=()):
         tax_data_path = os.path.join(DATA_PATH, 'data_for_tax_features')
         hmm_dir = os.path.join(DATA_PATH, 'hmms_for_proximity_features')
         hmm_db = os.path.join(hmm_dir, 'DRAMMA_ARG_DB.hmm')
         hth_hmm_domains = os.path.join(DATA_PATH, 'Pfam_HTH_domains.hmm')
-        feature_dict = {'labeling': Labeling(hmmer_path, hmm_db, label_threshold, by_eval),
-                        'multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, gene_window, nucleotide_window),
-                        'default_multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, delete_files=True),  # 5, 5000
-                        "HTH_domains": HTHDomainFeatures(hmmer_path, hth_hmm_domains), 'DNA_KMers': KMersFeatures(dna_kmer_size),
+        feature_dict = {'labeling': Labeling(hmmer_path, hmm_db, label_threshold, by_eval, n_cpus=n_cpus),
+                        'multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, gene_window, nucleotide_window, n_cpus=n_cpus),
+                        'default_multi_proximity': MultiProximityFeatures(hmmer_path, hmm_dir, threshold_list, by_eval, delete_files=True, n_cpus=n_cpus),  # 5, 5000
+                        "HTH_domains": HTHDomainFeatures(hmmer_path, hth_hmm_domains, n_cpus=n_cpus), 'DNA_KMers': KMersFeatures(dna_kmer_size),
                         "GC_Content": GCContentFeatures(), 'Prot_param': ProtParamsFeatures(),
                         'SmartGC': SmartGCFeatures(SMART_GC_DICT), 'Smart_AA_Kmers': SmartAAKmersFeatures(8, 8),
-                        "AA_features": AAFeatures(INDEX_FILE), 'Mmseqs': MMseqsTaxonomyFeatures(mmseqs_path, tax_data_path, ncpus=64),
+                        "AA_features": AAFeatures(INDEX_FILE), 'Mmseqs': MMseqsTaxonomyFeatures(mmseqs_path, tax_data_path, ncpus=n_cpus),
                         'Cross_Membrane': CrossMembraneFeatures(tmhmm_path)}
         self.features = list(feature_dict.values()) if not features else [value for key, value in feature_dict.items() if key in features]
 
