@@ -24,8 +24,8 @@ def get_tblout_file(hmmer_path, hmm_file_name, fasta_file, retry=3, is_domain=Fa
     if not os.path.isfile(tblout_path) or not is_valid_tblout(tblout_path):
         retry_num = 0
         while retry_num < retry:
-            print(f'hmmsearch {option} {tblout_path} {hmm_file_name} {fasta_file} --cpu {cpu-1}') # cpu -1 since there is a master thread that is not counted by this parameter
-            sp = subprocess.run(f'{hmmer_path} -o /dev/null {option} {tblout_path} {hmm_file_name} {fasta_file} --cpu {cpu-1}', shell=True)
+            print(f'hmmsearch --cpu {cpu-1} {option} {tblout_path} {hmm_file_name} {fasta_file}') # cpu -1 since there is a master thread that is not counted by this parameter
+            sp = subprocess.run(f'{hmmer_path} -o /dev/null --cpu {cpu-1} {option} {tblout_path} {hmm_file_name} {fasta_file}', shell=True)
             if sp.returncode != 0:
                 print(f"Failed running hmmsearch of {fasta_file} on {hmm_file_name}.")
                 if os.path.exists(tblout_path):
