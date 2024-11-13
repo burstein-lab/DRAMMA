@@ -93,9 +93,9 @@ if __name__ == '__main__':
     parser.add_argument("--ncpus", type=int, default=64, help="Number of cpus to use for feature extraction, default=64")
     parser.add_argument("-sf", "--suffix", default='', help="suffix to sample files such that the protein file will end with {suffix}proteins.faa."
                                                                     " for example, .min10k. to get only contigs of length more than 10k. Input '' (default) if none applies")
-    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'],
+    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['DNA_KMers', 'Cross_Membrane', 'SmartGC'],
                         help="The list of features names (according to the names in FeaturesList) that we dont want"
-                             "to execute. default: ['DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC']")
+                             "to execute. default: ['DNA_KMers', 'Cross_Membrane', 'SmartGC']")
     # dataset creation
     parser.add_argument("-b", "--batch_size", type=int, default=0, help="batch size for saving dataset for all_data=True. default: 0 (everything will be saved in one file)")
     # Running model

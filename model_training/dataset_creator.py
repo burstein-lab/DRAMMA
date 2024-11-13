@@ -54,7 +54,6 @@ def get_dataset(file_path, label_dict: dict = None, drop_na=True, label_lst=()):
     # removing inf values
     data.replace(np.inf, np.finfo(np.float32).max, inplace=True)
     data.replace(-np.inf, np.finfo(np.float32).min, inplace=True)
-
     return data, unique_labels
 
 
@@ -64,8 +63,6 @@ def get_test_df(file_path, new_labels_file=None, label_column_name=None, label_l
     else:
         df, _ = get_dataset(file_path, drop_na=False)
     X, y = df.drop(columns=['Label']), df['Label']
-    X.replace(np.inf, np.finfo(np.float32).max, inplace=True)
-    X.replace(-np.inf, np.finfo(np.float32).min, inplace=True)
     return X, y
 
 
@@ -120,6 +117,8 @@ def get_multi_class_dataset(data_file, labels_file, label_col_name, balance=True
         df = df[df['Label'] != 0]
         df['Label'] = df['Label'] - 1  # Reducing Label indices in 1
         label_indexes = label_indexes[1:]  # Removing zero from label list
+    df.replace(np.inf, np.finfo(np.float32).max, inplace=True)
+    df.replace(-np.inf, np.finfo(np.float32).min, inplace=True)
     return df, label_indexes
 
 

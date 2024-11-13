@@ -89,9 +89,9 @@ if __name__ == '__main__':
     parser.add_argument("-sf", "--suffix", default='.min10k.', help="suffix to sample files such that the protein file will end with {suffix}proteins.faa."
                                                                     " for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies")
 
-    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'],
+    parser.add_argument("-ftd", "--features_to_drop", nargs='*', type=str, default=['DNA_KMers', 'Cross_Membrane', 'SmartGC'],
                         help="The list of features names (according to the names in FeaturesList) that we dont want"
-                             "to execute. default: ['DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC']")
+                             "to execute. default: ['DNA_KMers', 'Cross_Membrane', 'SmartGC']")
     parser.add_argument("-pkl", "--pickle_file", help="path to pickle file with a FeatureList object. default: '' "
                                                       "(no file, therefore a new object is created)",  type=str, default='')
     parser.set_defaults(by_evalue=True)

@@ -95,7 +95,7 @@ Options:
   -n, --nucleotide_window Size of the nucleotides window (default: 10000)
   --ncpus               Number of cpus to use for feature extraction (default: 64)
   -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. to get only contigs of length more than 10k. Input '' (default value) if none applies
-  -ftd, --features_to_drop List of features to exclude (default: ['DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'])
+  -ftd, --features_to_drop List of features to exclude (default: ['DNA_KMers', 'Cross_Membrane',  'SmartGC'])
   -b, --batch_size      batch size for saving the dataset when the script is run on a directory of multiple samples(default: 0, everything will be saved in a single file)
   --model        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
   -sc, --single_class   Choose this to run a binary model (default)
@@ -128,7 +128,7 @@ Options:
   -e, --by_evalue       Use threshold by e-value (default)
   -s, --by_score        Use threshold by score
   -sf, --suffix         suffix to sample files such that the protein file will end with {suffix}proteins.faa. for example, .min10k. (default value) to get only contigs of length more than 10k. Input '' if none applies
-  -ftd, --features_to_drop List of features to exclude (default: ['DNA_KMers', 'Cross_Membrane', 'GC_Content', 'SmartGC'])
+  -ftd, --features_to_drop List of features to exclude (default: ['DNA_KMers', 'Cross_Membrane',  'SmartGC'])
   -pkl, --pickle_file   Path to pickle file with a FeatureList object (optional, if its not supplied, a new object will be created)
 ```
 
