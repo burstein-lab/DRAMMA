@@ -140,7 +140,7 @@ class MMseqsTaxonomyFeatures(MLFeature):
     def __add_missing_cols(self, df):
         missing_cols = [f'max_exponent_{db}' for db in DB_LST if f'max_exponent_{db}' not in df.columns]
         missing_cols += [f'{self.threshold}_e-value_percentage_{db}' for db in DB_LST if f'{self.threshold}_e-value_percentage_{db}' not in df.columns]
-        return df.reindex(columns=df.columns.tolist() + missing_cols)
+        return df.reindex(columns=df.columns.tolist() + missing_cols, fill_value=0.0)
 
     def __process_result_df(self, df, output_df):
         # extracting DB name from ID
