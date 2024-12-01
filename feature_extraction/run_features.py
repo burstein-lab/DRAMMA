@@ -73,7 +73,7 @@ if __name__ == '__main__':
     parser.add_argument('--output_dir', type=str, help='the path to the directory we want to save our features in, default: "features" (new sub directory of current directory)', default='features')
     parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program.")
     parser.add_argument('--mmseqs_path', type=str, help='full path to the Mmseqs2 program.')
-    parser.add_argument('--tmhmm_path', type=str, help='full path to the tmhmm_path program.')
+    parser.add_argument('--tmhmm_path', type=str, help='full path to the tmhmm program.')
     parser.add_argument("-k", "--kmer", type=int, default=4, help="It will run the kmers count from 2 to k, default=4")
     parser.add_argument("-lt", "--label_threshold", type=str, default="1e-10",
                         help="Threshold for labeling of the data, default='1e-10'")

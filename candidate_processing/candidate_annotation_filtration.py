@@ -107,7 +107,6 @@ def map_KEGG_annotations(res_df, res_dict, fasta_source_path, hmmer_path, kegg_h
     if not os.path.exists(fasta_for_KEGG):
         create_fasta_from_df(res_df, fasta_source_path, output_location=fasta_for_KEGG, suffix=fasta_suffix)
 
-    # hmmer_path, hmm_file_name, fasta, tblout_path, threshold=1e-6, ncpus=8
     tblout_path = output_prefix + '_KEGG_results.tblout'
     res_df = get_KEGG_annotations(hmmer_path, kegg_hmm, fasta_for_KEGG, tblout_path, ncpus)
     unknown_inds = res_df[(pd.notnull(res_df['desc'])) & (res_df['desc'].str.contains(UNKNOWN_PATTERN, case=False))].index
@@ -331,6 +330,9 @@ def filter_candidates(args):
         for tmp_file in [fasta_for_KEGG, fasta_for_blast, clustered_fasta, output_prefix + '_KEGG_results.pkl', output_prefix + '_KEGG_results.tblout', output_prefix + '_BLAST_results.pkl', output_prefix + "_BLAST_results.tsv", output_prefix + '_sequences_for_HH_suit.fasta', output_prefix + "_HH-suit_results.tsv", output_prefix + "_HH-suit_results_unfiltered.tsv", output_prefix + '_full_hhsuit_res.pkl']:
             if os.path.exists(tmp_file):
                 os.remove(tmp_file)
+
+    with open(args.out + "candidate_info.pkl", 'wb') as f_out:
+        pickle.dump(res_dict, f_out)
 
 
 if __name__ == '__main__':

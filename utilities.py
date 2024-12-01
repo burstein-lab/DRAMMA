@@ -87,6 +87,51 @@ def create_fasta_from_df(df, source_path, output_location='relevant_seqs.fasta',
     return output_location
 
 
+def check_if_rel_fasta(sample_name, fasta):
+    return any([sample_name in rec.id for rec in SeqIO.parse(fasta, 'fasta')])
+
+
+def find_fasta_file(sample_name, source_path, suffix='.min10k.proteins.faa'):
+    if isinstance(source_path, list): # input is a list of possible directories
+        for dir_path in source_path:
+            rel_fastas = glob.glob(os.path.join(dir_path, f'*{suffix}'))
+            for fasta in rel_fastas:
+                if check_if_rel_fasta(sample_name, fasta):
+                    return fasta
+
+    elif os.path.isdir(source_path):  # input is a single directory
+        rel_fastas = glob.glob(os.path.join(source_path, f'*{suffix}'))
+        for fasta in rel_fastas:
+            if check_if_rel_fasta(sample_name, fasta):
+                return fasta
+    else:  # input is a single fasta file
+        if check_if_rel_fasta(sample_name, source_path):
+            return source_path
+    return
+
+def get_sample_name(sample_name):
+    if '_ctg' in sample_name:
+        file_to_find = sample_name.split('_ctg')[0]
+    elif "_contig" in sample_name and "_bin" in sample_name:
+        file_to_find = sample_name.split('_bin')[0]
+    else:
+        sample_parts = sample_name.split("|")[:3]
+        file_to_find = "|".join(sample_parts)
+    return file_to_find
+
+
+def create_fasta_per_contig(df, output_dir, fastas_dir, suffix='.min10k.fa'):
+    inds = df.index.tolist()
+    contigs = set(["_".join(ind.split("_")[:-1]) for ind in inds])
+    rel_fastas = glob.glob(os.path.join(fastas_dir, f'*{suffix}'))
+    for contig in contigs:
+        for fasta in rel_fastas:
+            rel_recs = [rec for rec in SeqIO.parse(fasta, "fasta") if contig in rec.id]
+            if rel_recs:  # found the relevant file with the contig
+                SeqIO.write(rel_recs, os.path.join(output_dir, f"{contig.replace('|', '.')}.fasta"), "fasta")
+                break
+
+
 def combine_all_pkls(directory_path , df):
     '''
     runs over the directory and combines all the pkl into one.

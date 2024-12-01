@@ -101,6 +101,24 @@ def fix_df(df, is_pumps, columns):
     return df
 
 
+def create_dataset_by_ids(ids, features_dirs, output_file, columns=COLUMNS, is_pumps=False, save_pkl=True):
+    is_first = True
+    for dir in features_dirs:
+        for df in go_through_df(dir, ".contigs."):
+            rel_inds = df.index.intersection(ids)
+            df = df.loc[rel_inds, :]
+            # filtering out only non-empty Dataframes and those who did not fail in feature selection
+            if len(df) > 0 and 'passed threshold' in df.columns:
+                fix_labels(df, is_pumps)
+                missing_cols = [col for col in columns if col not in df.columns]
+                df = df.reindex(columns=df.columns.tolist() + missing_cols, fill_value=np.nan)
+                finale_df = df[columns] if is_first else pd.concat([finale_df, df[columns]])
+                is_first = False
+    if save_pkl:
+    	finale_df[columns].to_pickle(output_file)
+    return finale_df[columns]
+
+
 def run_dataset_creator(dir, whitelist, is_pumps, columns, all_data=False, is_pickle=False, batch_size=0, out_dir=os.getcwd()):
     """
     goes over the pickels one by one create the train dtataset with only a 10 fold negative/positive
