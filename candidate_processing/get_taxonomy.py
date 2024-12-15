@@ -5,10 +5,11 @@ import re
 import subprocess
 from utilities import get_filtered_fasta, create_fasta_per_contig
 from candidate_annotation_filtration import run_blast
+from pathlib import Path
 
 
-TAX_ID_TO_DESC = pd.read_pickle(os.path.join("..", 'data', 'WGS_genomes_lineage_mapping.pkl'))
-WGS_TAX_MAPPING = pd.read_pickle(os.path.join("..", 'data', 'WGS_gca_to_tax_mapping.pkl'))
+TAX_ID_TO_DESC = pd.read_pickle(os.path.join(Path(__name__).parent.absolute(), 'data', 'WGS_genomes_lineage_mapping.pkl'))
+WGS_TAX_MAPPING = pd.read_pickle(os.path.join(Path(__name__).parent.absolute(), 'data', 'WGS_gca_to_tax_mapping.pkl'))
 MMSEQS_COLS = ['ID', 'tax_id', 'tax_level', 'tax_name']
 TMP_DIR = os.path.join(os.getcwd(), 'tax_tmp')
 CONTIG_DIR =  os.path.join(os.getcwd(), 'candidates_contigs')

@@ -38,8 +38,9 @@ TMP_DIR = os.path.join(os.getcwd(), 'tmp')
 os.makedirs(TMP_DIR, exist_ok=True)
 
 
-def filter_high_score_candidates(df, threshold):
-    df = df[df['Label'] == 0]
+def filter_high_score_candidates(df, threshold, filter_neg=True):
+    if filter_neg:
+        df = df[df['Label'] == 0]
     if f'passed_{round(threshold, 2)}' in df.columns:
         df = df[df[f'passed_{round(threshold, 2)}'] == True]
     return df.drop(columns=[col for col in df.columns if 'passed_' in col])
@@ -94,7 +95,7 @@ def get_KEGG_annotations(hmmer_path, hmm_file_name, fasta, tblout_path, threshol
     return hmm_df[['ID', 'KO', 'desc']]
 
 
-def map_KEGG_annotations(res_df, res_dict, fasta_source_path, hmmer_path, kegg_hmm, fasta_suffix, output_prefix, ncpus=8):
+def map_KEGG_annotations(org_df, res_dict, fasta_source_path, hmmer_path, kegg_hmm, fasta_suffix, output_prefix, ncpus=8):
     print("in KEGG")
     KEGG_output_file = output_prefix + '_KEGG_results.pkl'
     fasta_for_KEGG = output_prefix + '_sequences_for_KEGG.fasta'
@@ -105,7 +106,7 @@ def map_KEGG_annotations(res_df, res_dict, fasta_source_path, hmmer_path, kegg_h
         return res_dict, res_df, ids_to_check, known, class_mapping, fasta_for_KEGG
 
     if not os.path.exists(fasta_for_KEGG):
-        create_fasta_from_df(res_df, fasta_source_path, output_location=fasta_for_KEGG, suffix=fasta_suffix)
+        create_fasta_from_df(org_df, fasta_source_path, output_location=fasta_for_KEGG, suffix=fasta_suffix)
 
     tblout_path = output_prefix + '_KEGG_results.tblout'
     res_df = get_KEGG_annotations(hmmer_path, kegg_hmm, fasta_for_KEGG, tblout_path, ncpus)
@@ -276,7 +277,9 @@ def unite_all_data(ids, original_df, blast_res, hhsuit_res):
 
 def unite_candidates(original_df, unknowns, kegg_known_df, full_blast_df, blast_unknowns, hhsuit_res, ids_with_blast):
     # Taking top 200 prots with kegg annotation, top 100 without kegg (after clustering) and all blast unknowns
-    kegg_knowns = kegg_known_df.sort_values('prob', ascending=False).iloc[:200]
+    print(original_df.columns)
+    best_kegg_known = original_df.loc[kegg_known_df.index].sort_values('prob', ascending=False).iloc[:200].index
+    kegg_knowns = kegg_known_df.loc[best_kegg_known]
     kegg_knowns['status'] = 'Kegg Known'
     kegg_unknowns = unite_all_data([ind for ind in ids_with_blast if ind not in blast_unknowns], original_df, full_blast_df, hhsuit_res).sort_values('prob', ascending=False).iloc[:100]
     kegg_unknowns['status'] = 'Kegg Unknown'
@@ -294,12 +297,12 @@ def filter_candidates(args):
     output_prefix = args.output_prefix.rstrip('_')
     res_df = pd.read_pickle(args.input_file)
     res_df = filter_high_score_candidates(res_df, args.threshold)
-    res_dict, res_df, keg_unknowns, kegg_known_df, kegg_classes, fasta_for_KEGG = map_KEGG_annotations(res_df, res_dict, args.fasta_source, args.hmmer_path, args.kegg_hmm, args.fasta_suffix, output_prefix, args.ncpus)
+    res_dict, kegg_df, keg_unknowns, kegg_known_df, kegg_classes, fasta_for_KEGG = map_KEGG_annotations(res_df, res_dict, args.fasta_source, args.hmmer_path, args.kegg_hmm, args.fasta_suffix, output_prefix, args.ncpus)
 
     fasta_for_blast = output_prefix + '_sequences_for_BLAST.fasta'
     clustered_fasta = fasta_for_blast.replace(".fasta", "_rep_seq.fasta")
     if not os.path.exists(fasta_for_blast):
-        get_filtered_fasta(fasta_for_KEGG, fasta_for_blast, keg_unknowns)
+        get_filtered_fasta(fasta_for_KEGG, fasta_for_blast, keg_unknowns.index)
 
     if not os.path.exists(clustered_fasta):
         clustered_fasta = run_clustering(fasta_for_blast, args.mmseqs_path, args.ncpus)  # clustering to remove similar proteins
@@ -322,7 +325,7 @@ def filter_candidates(args):
     get_filtered_fasta(fasta_for_hhsuit, candidates_fasta, unknowns)
     print(f"unknowns are: {unknowns}")
     if unknowns:
-        candidates = unite_candidates(res_df, unknowns, kegg_known_df, full_blast_df, blast_unknowns, full_hhsuit_df, ids_to_check)
+        candidates = unite_candidates(res_df.join(kegg_df.set_index('ID')), unknowns, kegg_known_df.set_index('ID'), full_blast_df, blast_unknowns, full_hhsuit_df, ids_to_check)
         res_dict['candidate'] = candidates
         create_fasta_from_df(candidates, args.fasta_source, output_prefix + 'all_candidates_seqs.fasta', suffix=args.fasta_suffix)
 
@@ -331,7 +334,7 @@ def filter_candidates(args):
             if os.path.exists(tmp_file):
                 os.remove(tmp_file)
 
-    with open(args.out + "candidate_info.pkl", 'wb') as f_out:
+    with open(args.output_prefix + "candidate_info.pkl", 'wb') as f_out:
         pickle.dump(res_dict, f_out)
 
 

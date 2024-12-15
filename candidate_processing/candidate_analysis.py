@@ -13,6 +13,7 @@ from collections import defaultdict
 from Bio import SearchIO
 from feature_extraction.create_tblout_file import get_tblout_file
 from pathlib import Path
+from candidate_annotation_filtration import filter_high_score_candidates
 
 
 TMP_FASTA = os.path.join(os.getcwd(), 'neg_candidates_seqs.fasta')
@@ -94,7 +95,7 @@ def get_environment(prot_id):
 
 def prepare_genomic_df(gdf, tax_level):
     # creation of series for all negative (non-ARG) proteins from genomes
-    all_gdf = gdf['tax_id'].value_counts(normalize=True).reset_index().rename(columns={'tax_id':'prec',"index":'tax_id'}).set_index('tax_id')
+    all_gdf = gdf['tax_id'].value_counts(normalize=True).reset_index().rename(columns={'tax_id':'prec',"index":'tax_id'})#.set_index('tax_id')
     all_gdf = get_rel_tax(all_gdf, tax_level)
 
     # using more general lineage for taxonomic groups with low frequency
@@ -221,8 +222,8 @@ def calculate_enrichment(df, gdf, all_gdf, mgdf, all_mgdf, tax_level):
 
 def get_domains_df(hmmer_path, neg, fasta, fasta_suffix, e_value, n_cpu):
     create_fasta_from_df(neg, fasta, output_location=TMP_FASTA, suffix=fasta_suffix)
-    tblout_file = fasta.replace(".fasta", "_pfam_res.tblout")
-    get_tblout_file(hmmer_path, HMM_PATH, fasta, is_domain=True, tblout_path=tblout_file, retry=3, cpu=n_cpu)
+    tblout_file = TMP_FASTA.replace(".fasta", "_pfam_res.tblout")
+    get_tblout_file(hmmer_path, HMM_PATH, TMP_FASTA, is_domain=True, tblout_path=tblout_file, retry=3, cpu=n_cpu)
     dom_df = parse_domtblout(tblout_file)
     dom_df = filter_domains(dom_df, e_value).set_index('ID')
     dom_df = dom_df.join(neg)
@@ -248,17 +249,19 @@ def plot_domains_frequency(dom_df, neg, top_doms):
     plt.savefig(f'top_{top_doms}_most_common_domains_percentage.pdf', bbox_inches='tight')
     plt.close()
     # Get percentage of genes with no known domains
-    missing_domain = len(total_prots) / len(neg)
+    missing_domain = total_prots / len(neg)
     print(f"Percentage of genes with proteins missing a know domain: {round(missing_domain, 2)}")
 
 
-def analyze_candidates(candidates, all_prots, fasta, fasta_suffix, hmmer_path, e_value=1e-6, tax_level=5, top_doms=20, n_cpu=3):
-    candidates = candidates if 'ID' in candidates.columns else candidates.reset_index()
+def analyze_candidates(all_prots, fasta, fasta_suffix, hmmer_path, threshold=0.75, e_value=1e-6, tax_level=5, top_doms=20, n_cpu=3):
+    all_prots = all_prots if 'ID' in all_prots.columns else all_prots.reset_index()
+    candidates = filter_high_score_candidates(all_prots, threshold, filter_neg=False)
     get_drug_and_mech(candidates)
     drugs_to_unite = get_drugs_to_unite(candidates)
 
-    all_gdf, all_mgdf = split_gdf_mgdf(all_prots[pd.isnull(all_prots['query_name'])], tax_level)
-    all_gdf, tax_to_unite, tax_to_other = prepare_genomic_df(all_prots, tax_level)
+    all_prots = all_prots[all_prots['Label'] == 0] # taking only negatives
+    all_gdf, all_mgdf = split_gdf_mgdf(all_prots, tax_level)
+    all_gdf, tax_to_unite, tax_to_other = prepare_genomic_df(all_gdf, tax_level)
     all_mgdf = prepare_metagenomic_df(all_mgdf)
     gdf, mgdf = get_candidate_dfs(candidates, tax_level, tax_to_unite, tax_to_other)
 
@@ -293,22 +296,20 @@ def parse_bool_arg(arg):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Analysis of positive and negative candidates according to taxonomy, environment and domains.')
-    parser.add_argument("-cd", "--candidates", type=str, help="Path to  pickle file with candidates, note: positives should have query_name value")
-    parser.add_argument("-ap", "--all_prots", type=str, help="Path to pickle file with all proteins (both high scoring and low scoring)")
+    parser.add_argument("-ap", "--all_prots", type=str, help="Path to pickle file with all proteins (both high scoring and low scoring). note: positives should have query_name value")
     parser.add_argument("-o", "--output_path", type=str, help="Path to output pickle with the domains information.")
     parser.add_argument("-f", "--fasta", type=str, help="Path to fasta file or directory of fastas with the candidate proteins. If not supplied, no domain search is done. default: '", default='')
     parser.add_argument("-s", "--fasta_suffix", type=str, help="Suffix to the relevant protein fasta files. Only used if --fasta is a directory. default: '.proteins.faa'", default='.proteins.faa')
     parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program. default: '' (no domain search is done)", default='')
+    parser.add_argument("-t", "--threshold", type=float, default=0.75, help="Precision value threshold to use for filtration of ARG candidates. default: 0.75")
     parser.add_argument("-e", "--e_value", type=float, default=1e-6, help="e-value threshold for domain HMM search. default: 1e-6")
     parser.add_argument("-tl", "--tax_level", type=int, default=5, help="Taxonomy hierarchy level to use. default: 5")
     parser.add_argument("-td", "--top_doms", type=int, default=20, help="how many top domains to show in figure. default: 20")
     parser.add_argument("-cpu", "--n_cpus", type=int, default=3, help="how many cpus to use for domain hmm search against Pfam. default: 3")
     args = parser.parse_args()
-    args.drop_duplicates = parse_bool_arg(args.drop_duplicates)
 
-    cdf = pd.read_pickle(args.candidates)
     ap_df = pd.read_pickle(args.all_prots)
-    out_df, gdf, mgdf = analyze_candidates(cdf, ap_df, hmmer_path=args.hmmer_path, e_value=args.e_value, fasta=args.fasta, fasta_suffix=args.fasta_suffix, tax_level=args.tax_level, top_doms=args.top_doms, n_cpu=args.n_cpus)
+    out_df, gdf, mgdf = analyze_candidates(ap_df, hmmer_path=args.hmmer_path, threshold=args.threshold, e_value=args.e_value, fasta=args.fasta, fasta_suffix=args.fasta_suffix, tax_level=args.tax_level, top_doms=args.top_doms, n_cpu=args.n_cpus)
     if len(out_df) > 0:
         out_df.to_pickle(args.output_path)
     gdf.to_pickle(args.output_path.replace('.pkl', '_genomes.pkl'))

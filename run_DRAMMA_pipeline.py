@@ -10,6 +10,7 @@ from feature_extraction.run_features import create_features_from_dir
 from feature_extraction.feature_list import FeatureList, ALL_FEATURES
 from utilities import combine_all_pkls
 from feature_extraction.train_dataset_creator import run_dataset_creator, fix_df, COLUMNS
+from model_training.dataset_creator import load_df
 
 
 def get_model_res(model_pickle, dataset_path, is_multi_class):
@@ -17,7 +18,9 @@ def get_model_res(model_pickle, dataset_path, is_multi_class):
         model_res = get_model_results_multi_class(model_pickle, dataset_path)
     else:
         model_res = get_model_results_single_label(dataset_path, pkl=model_pickle, filter_pos=False, filter_low_scores=False)[['Label', 'prob', 'passed_0.75', 'passed_0.95']]
-    return model_res
+
+    query_name = load_df(dataset_path)['query_name']
+    return model_res.join(query_name)
 
 
 def single_sample_pipeline(args, feature_lst):

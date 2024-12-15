@@ -7,11 +7,11 @@ import argparse
 from pathlib import Path
 import pickle
 import networkx as nx
-from run_model import get_model_results_multi_class
 from candidate_annotation_filtration import run_clustering
 from get_taxonomy import get_taxonomy, fill_missing_tax_level
 from get_candidates_neighbors import get_neighbors
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from run_model import get_model_results_multi_class
 from feature_extraction.HTH_domain import HTHDomainFeatures
 from feature_extraction.cross_membrane import CrossMembraneFeatures
 from utilities import getIDs
@@ -119,8 +119,8 @@ def prepare_file(df):
 def get_info_df(candidate_pkl):
     with open(candidate_pkl, 'rb') as fin:
         data = pickle.load(fin)['candidate']
-    data = data.rename(columns={'desc': 'KEGG_description'})
-    return data.sort_values('prob', ascending=False).drop_duplicates(subset=['ID']).set_index('ID')
+    data = data.rename(columns={'desc': 'KEGG_description', 'description': 'hhsuit_res_description'})
+    return data.sort_values('prob', ascending=False).reset_index().drop_duplicates(subset=['ID']).set_index('ID')
 
 
 def main(candidate_pkl, seq_fasta, feature_dirs, fastas_dir, ref_fasta_dirs, mmseqs_dir, mech_model, mmseqs_path,
