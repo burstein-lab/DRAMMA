@@ -21,6 +21,9 @@ def load_df(file_path):
         df = pd.read_csv(file_path, sep='\t', compression="gzip")
     else:
         df = pd.read_csv(file_path, sep='\t')
+
+    if "ID" in df.columns:
+        df.set_index('ID', inplace=True)
     return df.drop_duplicates()
 
 
@@ -47,9 +50,6 @@ def get_dataset(file_path, label_dict: dict = None, drop_na=True, label_lst=()):
     data.drop(COLS_TO_REMOVE, axis=1, inplace=True, errors='ignore')
     if drop_na: # drop empty columns
         data.dropna(how="all", axis=1, inplace=True)
-
-    if "ID" in data.columns:
-        data.set_index('ID', inplace=True)
 
     # removing inf values
     data.replace(np.inf, np.finfo(np.float32).max, inplace=True)

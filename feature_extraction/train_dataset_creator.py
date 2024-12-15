@@ -194,7 +194,7 @@ if __name__ == '__main__':
     parser.add_argument("-wl", "--whitelist", type=str, default='',
                         help="how to filter which folders to check, default = '' (check all)")
     parser.add_argument("-d", "--directory", type=str, help="Directory to (only) all the pkls")
-    parser.add_argument("-f", "--fasta", type=str, help="path to relevant protein fasta file to use for de-duplication. Only used when all_data is False")
+    parser.add_argument("-f", "--fasta", type=str, help="path to relevant protein fasta file or directory with fastas to use for de-duplication. Only used when all_data is False")
     parser.add_argument('--cdhit_path', type=str, help='full path to the cd-hit program.')
     parser.add_argument("-p", "--pumps", type=str, default="False",
                         help="should we create the pump train set? keep empty for the no pumps option")
