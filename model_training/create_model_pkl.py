@@ -1,7 +1,7 @@
 import matplotlib as mpl
 mpl.use('Agg')
 from AMR_model import AMRModel
-from model_training import get_train_analysis
+from model_training_utils import get_train_analysis
 from model_evaluation.evaluate_model import get_model_quality_stats
 from utilities import load_param_pkl
 from dataset_creator import get_test_df, get_dataset, split_the_data, get_multi_class_dataset
