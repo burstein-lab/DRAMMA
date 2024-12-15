@@ -8,11 +8,12 @@ from dataset_creator import get_test_df, get_dataset, split_the_data, get_multi_
 import argparse
 import numpy as np
 import os
+from pathlib import Path
 import pickle
 import json
 
 COLS_TO_REMOVE = ['query_name', 'query_accession', 'best_eval', 'best_eval_exponent', 'best_score', 'passed threshold', 'Contig']
-LABEL_FILE = os.path.join('..', 'data', 'arg_mech_drugs.tsv')
+LABEL_FILE = os.path.join(Path(__name__).parent.absolute(), 'data', 'arg_mech_drugs.tsv')
 TMP_FILE = os.path.join(os.getcwd(), "create_pickle_tmp.txt")
 
 
@@ -33,15 +34,18 @@ def main(args, param_dict, selected_feats):
         log_stats("got thresholds")
         dataset, labels = get_multi_class_dataset(args.input_path, LABEL_FILE, args.label_col, drop_zero=True)
         X_train, y_train = split_the_data(dataset)
-        amr_model = AMRModel(X_train, y_train, selected_feats, n_feats=args.n, n_jobs=args.n_jobs, param_dict=param_dict)
+        amr_model = AMRModel(X_train.drop('Contig', axis=1, errors='ignore'), y_train, selected_feats, n_feats=args.n, n_jobs=args.n_jobs, param_dict=param_dict)
         log_stats("Finished model training")
         data_objs = [amr_model.model, amr_model.features, labels, threshold_dict]
 
         if args.test_set:
-            X_test, y_test = get_test_df(args.test_set, new_labels_file=LABEL_FILE, label_column_name=args.label_col, label_lst=labels, drop_zero=True)
-            crosstab, _, _, test_threshold_dict = get_model_quality_stats(amr_model.model, [], X_test[amr_model.features], y_test, save_figs=True, display=True, prefix=f"{args.label_col.replace(' ', '_')}_multiclass_", label_names=labels)
-            log_stats("Finished test eval")
-            print(crosstab)
+            try:
+                X_test, y_test = get_test_df(args.test_set, new_labels_file=LABEL_FILE, label_column_name=args.label_col, label_lst=labels, drop_zero=True)
+                crosstab, _, _, test_threshold_dict = get_model_quality_stats(amr_model.model, [], X_test[amr_model.features], y_test, save_figs=True, display=True, prefix=f"{args.label_col.replace(' ', '_')}_multiclass_", label_names=labels)
+                log_stats("Finished test eval")
+                print(crosstab)
+            except Exception as e:
+                print(f"Test Set Evaluation Failed. Error: {e}")
 
     else:
         # This function also creates feature importance fig and 5-fold AUPR and AUROC figures
@@ -52,15 +56,18 @@ def main(args, param_dict, selected_feats):
         log_stats("got thresholds")
 
         X_train, y_train = split_the_data(get_dataset(args.input_path)[0])
-        amr_model = AMRModel(X_train, y_train, selected_feats, n_feats=args.n, n_jobs=args.n_jobs, param_dict=param_dict)
+        amr_model = AMRModel(X_train.drop('Contig', axis=1, errors='ignore'), y_train, selected_feats, n_feats=args.n, n_jobs=args.n_jobs, param_dict=param_dict)
         log_stats("Finished model training")
         data_objs = [amr_model.model, amr_model.features, threshold_dict]
 
         if args.test_set:
-            X_test, y_test = get_test_df(args.test_set)
-            crosstab, _, _, test_threshold_dict = get_model_quality_stats(amr_model.model, [], X_test[amr_model.features], y_test, save_figs=True, display=True)
-            log_stats("Finished test eval")
-            print(crosstab)
+            try:
+                X_test, y_test = get_test_df(args.test_set)
+                crosstab, _, _, test_threshold_dict = get_model_quality_stats(amr_model.model, [], X_test[amr_model.features], y_test, save_figs=True, display=True)
+                log_stats("Finished test eval")
+                print(crosstab)
+            except Exception as e:
+                print(f"Test Set Evaluation Failed. Error: {e}")
 
     with open(args.output_path, "wb") as f_out:
         for obj in data_objs:

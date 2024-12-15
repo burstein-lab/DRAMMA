@@ -137,7 +137,7 @@ def run_dataset_creator(dir, whitelist, is_pumps, columns, all_data=False, is_pi
                 df = fix_df(df, is_pumps, columns)
                 # appending dataframe to result file
                 if batch_size == 0: # appending all results to one file
-                    df[columns].to_csv(os.path.join(out_dir, 'ml_feature_table_complete_dataset.tsv.gz'), sep='\t', mode='a', header=is_first, compression="gzip")
+                    df[columns].to_csv(os.path.join(out_dir, 'ml_feature_table_complete_dataset.tsv.gz'), sep='\t', mode='w' if is_first else 'a', header=is_first, compression="gzip")
                     is_first = False
                 else:
                     finale_df = df[columns] if is_first else pd.concat([finale_df, df[columns]])

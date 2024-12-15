@@ -1,12 +1,11 @@
 import pandas as pd
 import numpy as np
-from .AMR_model import AMRModel
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from model_training.AMR_model import AMRModel
 from utilities import parse_query_name, parse_arg_name
-try:
-    from sklearn.model_selection import StratifiedGroupKFold as GroupKFold
-except ImportError:
-    print("Could not import StratifiedGroupKFold")
-    from sklearn.model_selection import GroupKFold
+from sklearn.model_selection import StratifiedGroupKFold as GroupKFold
 from sklearn.utils import shuffle
 
 

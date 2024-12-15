@@ -36,6 +36,7 @@ def get_correlation_clusters(df, correlation_threshold=0.85):
         distances = 1 - corr_df.values
         distArray = ssd.squareform(distances)
         hier = hc.linkage(distArray, method="average")
+        hier = np.clip(hier, a_min=0.0, a_max=hier.max())
         cluster_labels = hc.fcluster(hier, 1-correlation_threshold, criterion="distance")
 
         cluster_mapping = defaultdict(list)

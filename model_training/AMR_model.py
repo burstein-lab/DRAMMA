@@ -1,4 +1,7 @@
-from .correlated_features import get_features_to_drop
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from model_training.correlated_features import get_features_to_drop
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
