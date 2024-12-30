@@ -176,7 +176,7 @@ This script runs the trained model on input data.
 python run_model.py --model <path_to_model_pickle> -in <input_file> -out <output_file> [options]
 
 Options:
-  --model        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by create_model_pkl.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
+  --model        Path to pickle with the model, relevant cols, and model score thresholds dictionary (created by run_DRAMMA_pipeline.py or downloaded from Zenodo, default: ./data/models/DRAMMA_AMR_model.pkl)
   -in, --input_file     Path to the file we want to run the model against
   -out, --output_file   Path to pkl file we want to save our results in
   -fp, --filter_pos     Choose this to keep only negative proteins (non-AMRs) 
@@ -186,6 +186,27 @@ Options:
   -sc, --single_class   Choose this to run a binary model (default)
   -mc, --multi_class    Choose this to run a multi_class model
 ```
+
+### 6. candidate_analysis.py
+
+This script runs an analysis of the ARG candidates according to their taxonomy group, environment and domains.
+
+```
+python candidate_processing/candidate_analysis.py --all_prots <path_to_model_result> -o <output_file> [options]
+
+Options:
+  -ap, --all_prots        Path to pickle file with the model's results on all proteins (both high scoring and low scoring). Note: positive protein should have query_name value (This file is created by create_model_pkl.py or run_model.py)
+  -o, --output_path   Path to pkl file we want to save our results in
+  -t, --threshold   Precision value threshold to use for filtration of ARG candidates (default: 0.75)
+  -tl, --tax_level   Taxonomy hierarchy level to use (default: 5)
+  -f, --fasta     Path to fasta file or directory of fastas with the candidate proteins. If not supplied (""), no domain search is done (default: "")
+  -s, --fasta_suffix       Suffix to the relevant protein fasta files. Only used if --fasta is a directory (default: '.proteins.faa')
+  --hmmer_path          Full path to the HMMER's hmmsearch program
+  -e, --e_value    e-value threshold for domain HMM search (default: 1e-6)
+  -td, --top_doms    How many top domains to show in figure (default: 20)
+  -cpu, --n_cpus    how many cpus to use for domain hmm search against Pfam (default: 3)
+```
+
 
 
 ## Contact
