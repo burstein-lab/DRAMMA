@@ -6,7 +6,7 @@ from utilities import go_through_files
 from pathlib import Path
 
 
-TMP_DIR = os.path.join(Path(__name__).absolute(), 'data', 'feature_extraction', 'data_for_tax_features', 'query_dbs', 'tmp')
+TMP_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data', 'feature_extraction', 'data_for_tax_features', 'query_dbs', 'tmp')
 NCPUS = 64
 GMEM = 32
 RES_COLUMNS = ['ID', 'target_id', 'target_header', 'e-value']

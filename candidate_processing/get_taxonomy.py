@@ -111,7 +111,7 @@ def get_taxonomy_by_blast(df, inds, blast_fasta, blast_db, diamond_path, get_bla
     df.loc[inds, 'tax_id'] = bdf.loc[inds, 'tax_id']
 
 
-def get_taxonomy(df, fasta, fastas_dir, mmseqs_db, mmseqs_path, blast_db, diamond_path, extract_contigs=True, run_mmseq=True, suffix='.min10k.fa', to_delete=True):
+def get_taxonomy(df, fasta, fastas_dir, mmseqs_db, mmseqs_path, blast_db, diamond_path, extract_contigs=True, run_mmseq=True, suffix='.min10k.fa', to_delete=True, filter_euk=False):
     df = df.drop_duplicates() if "ID" in df.columns else df.reset_index().drop_duplicates()
     df['tax_id'] = df['ID'].apply(get_taxonomy_by_id)
     df.set_index('ID', inplace=True)
@@ -120,7 +120,7 @@ def get_taxonomy(df, fasta, fastas_dir, mmseqs_db, mmseqs_path, blast_db, diamon
     blast_fasta = os.path.join(os.getcwd(), "ids_for_tax_blast.fasta")
     get_filtered_fasta(fasta, blast_fasta, unknown_ids)
     get_taxonomy_by_blast(df, unknown_ids, blast_fasta, blast_db, diamond_path, get_blast=run_mmseq)
-    df = get_tax_hierarchy(df)
+    df = get_tax_hierarchy(df, filter_euk=filter_euk)
 
     if to_delete:
         to_rm = [blast_fasta, TMP_DIR, CONTIG_DIR, os.path.join(os.getcwd(), "blast_tax_results.tsv")]

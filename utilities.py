@@ -78,7 +78,7 @@ def create_fasta_from_df(df, source_path, output_location='relevant_seqs.fasta',
         os.remove(output_location)
     inds = list(set(['_'.join(ind.split('_')[:-1]) for ind in df.index])) if is_contig else df.index.tolist()
     if os.path.isdir(source_path):  # given a directory with files instead of a single file
-        rel_fastas = glob.glob(os.path.join(source_path, f'*{suffix}'))
+        rel_fastas = glob.glob(os.path.join(source_path, '**', f'*{suffix}'), recursive=True)
         recs = [filter_fasta(fasta, inds) for fasta in rel_fastas]
         SeqIO.write([item for sublist in recs for item in sublist], output_location, "fasta")
     else:
@@ -94,13 +94,13 @@ def check_if_rel_fasta(sample_name, fasta):
 def find_fasta_file(sample_name, source_path, suffix='.min10k.proteins.faa'):
     if isinstance(source_path, list): # input is a list of possible directories
         for dir_path in source_path:
-            rel_fastas = glob.glob(os.path.join(dir_path, f'*{suffix}'))
+            rel_fastas = glob.glob(os.path.join(dir_path, '**', f'*{suffix}'), recursive=True)
             for fasta in rel_fastas:
                 if check_if_rel_fasta(sample_name, fasta):
                     return fasta
 
     elif os.path.isdir(source_path):  # input is a single directory
-        rel_fastas = glob.glob(os.path.join(source_path, f'*{suffix}'))
+        rel_fastas = glob.glob(os.path.join(source_path, '**', f'*{suffix}'), recursive=True)
         for fasta in rel_fastas:
             if check_if_rel_fasta(sample_name, fasta):
                 return fasta

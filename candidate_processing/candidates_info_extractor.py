@@ -96,15 +96,13 @@ def filter_candidates(df, top_candidates=10):
     df = df[~df['tax_level_2'].isin(TAX_BLACKLIST)]
     df = df[df['frequent_neighbors'] == 0]
     df = df.drop_duplicates('cluster_after_blast', keep='first')
-    df = df[['prob', 'Class', 'blast_res_description', 'blast_evalue', 'hhsuit_res_description', 'hhsuit_e-value', 'hhsuit_hit_length_fraction', 'Updated Resistance Mechanism_class', 'Updated Resistance Mechanism_prob', 'tax_level_1', 'tax_level_2', 'tax_level_3', 'tax_level_4']]
+    df = df[['prob', 'Class', 'KEGG_description', 'blast_res_description', 'blast_evalue', 'hhsuit_res_description', 'hhsuit_e-value', 'hhsuit_hit_length_fraction', 'Updated Resistance Mechanism_class', 'Updated Resistance Mechanism_prob', 'tax_level_1', 'tax_level_2', 'tax_level_3', 'tax_level_4']]
     top = df.iloc[:top_candidates]
     return top
 
 
 def prepare_file(df):
     columns = list(df.columns)
-    df = df[columns[:2] + columns[-2:] + columns[2:-2]]
-    df['KO'] = df['KO'].fillna('-')
     df['KEGG_description'] = df['KEGG_description'].fillna('hypothetical protein')
     df['prob'] = df['prob'].round(3)
     df['Updated Resistance Mechanism_prob'] = df['Updated Resistance Mechanism_prob'].round(3)
@@ -133,7 +131,7 @@ def main(candidate_pkl, seq_fasta, feature_dirs, fastas_dir, ref_fasta_dirs, mms
     HTH_df = get_HTH_domain(seq_fasta, ids, hmmer_path)
     cm_df = get_cross_membrane(seq_fasta, tmhmm_path)
     mech_df = get_mechanisms(info_df.index, mech_model, feature_dirs)
-    tax_df = get_taxonomy(info_df, seq_fasta, fastas_dir, mmseqs_db, mmseqs_path, blast_db, diamond_path, suffix=suffix, extract_contigs=extract_contigs, run_mmseq=run_mmseq).drop(info_df.columns, axis=1, errors='ignore')
+    tax_df = get_taxonomy(info_df, seq_fasta, fastas_dir, mmseqs_db, mmseqs_path, blast_db, diamond_path, suffix=suffix, extract_contigs=extract_contigs, run_mmseq=run_mmseq, filter_euk=True).drop(info_df.columns, axis=1, errors='ignore')
 
     info_df = info_df.join([seq_df, cluster_df, HTH_df, mech_df, tax_df, cm_df]).drop(columns=COLS_TO_REMOVE, errors='ignore')
     info_df = info_df.rename(columns={k: v for k, v in RENAME_DICT.items() if k in info_df.columns})

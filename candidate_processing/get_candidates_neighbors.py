@@ -34,7 +34,7 @@ def get_neighbors_fasta(df, source_path, output_location, n=3, suffix='.min10k.p
             continue
         location = find_fasta_file(sample, source_path, suffix=suffix)
         if location is None:
-            print(f"{location} location of sample {sample} does not exist. group is {list(group)}")
+            print(f"location of sample {sample} does not exist. group is {list(group)}")
             continue
         records = SeqIO.parse(location, "fasta")
         wanted_ids = [get_gene_neighbors_id(ind, n) for ind in group]
