@@ -52,19 +52,19 @@ Please ensure these external programs are installed and accessible in your syste
 ## Getting the data
 Downloading the trained models and data needed for the feature extraction scripts from the Zenodo database.
 
-In order to get the trained models, click on the following Zenodo link [https://doi.org/10.5281/zenodo.12621924](https://doi.org/10.5281/zenodo.12621924)
+In order to get the trained models, click on the following Zenodo link [https://doi.org/10.5281/zenodo.14524530](https://doi.org/10.5281/zenodo.14524530)
 or use the command line:
 ```
 cd data
-wget https://zenodo.org/record/12621924/files/models.tar.gz?download=1
+wget https://zenodo.org/record/14524530/files/models.tar.gz?download=1
 tar -zxvf models.tar.gz
 rm models.tar.gz
 ```
 To get the data needed for the feature extraction scripts, use the following commands:
 ```
 cd data
-wget https://zenodo.org/record/12636135/files/data.tar.gz.part_aa?download=1
-wget https://zenodo.org/record/12636139/files/data.tar.gz.part_ab?download=1
+wget https://zenodo.org/record/14513933/files/data.tar.gz.part_aa?download=1
+wget https://zenodo.org/record/14524613/files/data.tar.gz.part_ab?download=1
 cat data.tar.gz.part_* > data.tar.gz
 tar -zxvf data.tar.gz
 rm -r data.tar.gz*
