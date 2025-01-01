@@ -164,7 +164,7 @@ def create_bar_plots(df, col_to_plot, groups_col, tax_level, to_unite=()):
     plt.title(f"{col_to_plot} Distribution Per {groups_col_clean}", fontsize=15)
     plt.xlabel(groups_col_clean, fontsize=13)
     plt.xticks(rotation=75)  # 0
-    plt.legend(loc=(1.04, 0), fontsize='x-large')
+    plt.legend(loc=(1.04, 0), fontsize='x-large', reverse=True)
     plt.tight_layout()
     plt.savefig(f"{groups_col}_{col_to_plot}_positives_bars.pdf", bbox_inches='tight')
     plt.close()
@@ -303,7 +303,7 @@ if __name__ == "__main__":
     parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program. default: '' (no domain search is done)", default='')
     parser.add_argument("-t", "--threshold", type=float, default=0.75, help="Precision value threshold to use for filtration of ARG candidates. default: 0.75")
     parser.add_argument("-e", "--e_value", type=float, default=1e-6, help="e-value threshold for domain HMM search. default: 1e-6")
-    parser.add_argument("-tl", "--tax_level", type=int, default=5, help="Taxonomy hierarchy level to use. default: 5")
+    parser.add_argument("-tl", "--tax_level", type=int, default=2, help="Taxonomy hierarchy level to use. default: 2")
     parser.add_argument("-td", "--top_doms", type=int, default=20, help="how many top domains to show in figure. default: 20")
     parser.add_argument("-cpu", "--n_cpus", type=int, default=3, help="how many cpus to use for domain hmm search against Pfam. default: 3")
     args = parser.parse_args()

@@ -198,7 +198,7 @@ Options:
   -ap, --all_prots        Path to pickle file with the model's results on all proteins (both high scoring and low scoring). Note: positive protein should have query_name value (This file is created by create_model_pkl.py or run_model.py)
   -o, --output_path   Path to pkl file we want to save our results in
   -t, --threshold   Precision value threshold to use for filtration of ARG candidates (default: 0.75)
-  -tl, --tax_level   Taxonomy hierarchy level to use (default: 5)
+  -tl, --tax_level   Taxonomy hierarchy level to use (default: 2)
   -f, --fasta     Path to fasta file or directory of fastas with the candidate proteins. If not supplied (""), no domain search is done (default: "")
   -s, --fasta_suffix       Suffix to the relevant protein fasta files. Only used if --fasta is a directory (default: '.proteins.faa')
   --hmmer_path          Full path to the HMMER's hmmsearch program
