@@ -207,7 +207,36 @@ Options:
   -cpu, --n_cpus    how many cpus to use for domain hmm search against Pfam (default: 3)
 ```
 
+## Model output
+Running the `run_model.py` script generates a pickle file containing a dataframe with the following structure:  
+| Column Name      | Data Type  |  
+|------------------|------------|  
+| **Label**       | int        |  
+| **prob**        | float64    |  
+| **passed_0.75** | bool       |  
+| **passed_0.95** | bool       |  
+| **query_name**  | object     |  
 
+The dataframe index corresponds to the protein identifiers. 
+
+### Column Descriptions  
+
+- **Label**: Indicates whether the protein has a match in our resistance gene database (**DRAMMA-HMM-DB**).  
+- **query_name**: Specifies the resistance gene it matched (if applicable).  
+- **prob**: Represents the model’s prediction probability:  
+  - Higher values indicate greater confidence that the gene confers resistance.  
+  - Lower values suggest stronger confidence in a negative prediction.  
+- **passed_0.75** and **passed_0.95**: Boolean indicators of whether the gene's probability surpasses thresholds for expected precision levels:  
+  - **passed_0.75** → Expected **75% precision** (higher recall, includes more potential resistance genes).  
+  - **passed_0.95** → Expected **95% precision** (higher precision, fewer false positives).
+
+### Identifying Novel Resistance Genes  
+
+To identify novel resistance genes, filter the results to include only rows where:  
+- **Label = 0** (indicating no match in the database), and  
+- **passed_0.75 = True** (for broader discovery) or **passed_0.95 = True** (for higher precision).  
+
+This ensures that only potentially novel resistance genes are considered based on the model’s predictions.
 
 ## Contact
 For questions about DRAMMA, please contact us:
