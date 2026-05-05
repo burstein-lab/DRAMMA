@@ -56,15 +56,15 @@ In order to get the trained models, click on the following Zenodo link [https://
 or use the command line:
 ```
 cd data
-wget https://zenodo.org/record/14524530/files/models.tar.gz?download=1
+wget https://zenodo.org/record/14524530/files/models.tar.gz
 tar -zxvf models.tar.gz
 rm models.tar.gz
 ```
 To get the data needed for the feature extraction scripts, use the following commands:
 ```
 cd data
-wget https://zenodo.org/record/14513933/files/data.tar.gz.part_aa?download=1
-wget https://zenodo.org/record/14524613/files/data.tar.gz.part_ab?download=1
+wget https://zenodo.org/record/14513933/files/data.tar.gz.part_aa
+wget https://zenodo.org/record/14524613/files/data.tar.gz.part_ab
 cat data.tar.gz.part_* > data.tar.gz
 tar -zxvf data.tar.gz
 rm -r data.tar.gz*
